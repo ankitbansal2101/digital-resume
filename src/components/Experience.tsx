@@ -9,9 +9,10 @@ const Experience = () => {
       location: 'Bangalore - Remote',
       period: 'Jan 2025 – Present',
       achievements: [
-        'Redesigned onboarding flow for trial users based on drop-off data and interviews, resulting in a 12% increase in trial-to-paid conversion',
-        'Improved dashboard UX through data-informed simplification, reducing average task completion time by 15%',
+        'Redesigned onboarding flow for trial users based on drop-off data and interviews, resulting in a 7% increase in trial-to-paid conversion',
         'Launched a Drone Log Analysis feature that parses telemetry, detects patterns, and flags anomalies—helping acquire users previously reliant on third-party tools',
+        'Built quick prototypes and POCs to help dev and design teams validate concepts before full development cycles',
+        'Initiated AI feature development including annotation summaries using LLM and RAG chatbot to reduce customer time spent manually reviewing product documentation and PDFs',
         'Collaborated across design, QA, and engineering to ship three telemetry-based enhancements aligned with user-reported needs',
         'Drove backlog grooming, sprint planning, and post-launch feedback loops'
       ]
