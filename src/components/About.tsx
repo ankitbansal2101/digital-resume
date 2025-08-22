@@ -18,7 +18,7 @@ const About = () => {
           
           
           <p className="text-gray-700 leading-relaxed">
-            Deeply passionate about emerging technologies and the future of product development. Actively explore trending AI innovations—including generative AI, RAG-based chatbots, and low-code/no-code tools like Cursor, Bolt, Lovable, and n8n—using agent programming to build quick side projects and understand tech in more detail.
+            Passionate about emerging technologies and their impact on product innovation. I actively explore cutting-edge AI developments—from generative AI and RAG-based chatbots to modern low-code/no-code platforms like Cursor, Bolt, Lovable, and n8n. Through hands-on experimentation with agent programming and rapid prototyping, I build side projects that deepen my technical understanding and inform better product decisions.
           </p>
         </div>
       </div>
