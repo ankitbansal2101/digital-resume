@@ -136,10 +136,10 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-3 sm:p-4">
-      <div className="bg-white rounded-lg shadow-2xl w-full max-w-2xl h-[85vh] max-h-[600px] sm:h-[600px] flex flex-col">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-end sm:items-center justify-center z-50 p-0 sm:p-4">
+      <div className="bg-white rounded-t-2xl sm:rounded-lg shadow-2xl w-full max-w-2xl h-[75vh] sm:h-[600px] sm:max-h-[600px] flex flex-col">
         {/* Header */}
-        <div className="bg-blue-600 text-white p-3 sm:p-4 rounded-t-lg flex items-center justify-between">
+        <div className="bg-blue-600 text-white p-3 sm:p-4 rounded-t-2xl sm:rounded-t-lg flex items-center justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="bg-blue-500 p-1.5 sm:p-2 rounded-full">
               <Bot size={16} className="sm:w-5 sm:h-5" />
@@ -158,7 +158,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-2 sm:p-4 space-y-4">
+        <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4">
           {/* Predefined Questions */}
           <PredefinedQuestions 
             onQuestionSelect={handlePredefinedQuestionSelect}
@@ -176,7 +176,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               )}
               
               <div
-                className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                className={`max-w-[280px] sm:max-w-xs lg:max-w-md px-3 sm:px-4 py-2 rounded-lg ${
                   message.role === 'user'
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-900'
@@ -228,7 +228,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Input */}
-        <div className="border-t p-2 sm:p-4">
+        <div className="border-t p-3 sm:p-4">
           <div className="flex gap-2">
             <input
               ref={inputRef}
