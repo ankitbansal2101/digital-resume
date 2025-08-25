@@ -183,9 +183,9 @@ const PredefinedQuestions: React.FC<PredefinedQuestionsProps> = ({ onQuestionSel
   const categories = Array.from(new Set(predefinedQuestions.map(q => q.category)));
 
   return (
-    <div className="mb-4 p-4 bg-gray-50 rounded-lg border">
+    <div className="mb-4 p-3 sm:p-4 bg-gray-50 rounded-lg border">
       <div className="flex items-center gap-2 mb-3">
-        <MessageSquare size={16} className="text-blue-600" />
+        <MessageSquare size={14} className="text-blue-600" />
         <h3 className="text-sm font-medium text-gray-700">Quick Questions</h3>
       </div>
       
@@ -193,14 +193,14 @@ const PredefinedQuestions: React.FC<PredefinedQuestionsProps> = ({ onQuestionSel
         {categories.map(category => (
           <div key={category}>
             <h4 className="text-xs font-medium text-gray-500 mb-2">{category}</h4>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {predefinedQuestions
                 .filter(q => q.category === category)
                 .map(question => (
                   <button
                     key={question.id}
                     onClick={() => onQuestionSelect(question.question, question.answer)}
-                    className="text-xs bg-white border border-gray-200 text-gray-700 px-3 py-1.5 rounded-full hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors"
+                    className="text-xs bg-white border border-gray-200 text-gray-700 px-2.5 sm:px-3 py-1.5 rounded-full hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors leading-tight"
                   >
                     {question.question}
                   </button>

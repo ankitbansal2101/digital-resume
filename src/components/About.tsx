@@ -34,27 +34,27 @@ const About = () => {
 
   return (
     <section id="about" className="scroll-mt-20">
-      <div className="bg-white rounded-lg shadow-sm p-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+      <div className="bg-white rounded-lg shadow-sm p-4 sm:p-8">
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
           Who Am I?
         </h2>
         
-        <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-8 min-h-[300px]">
+        <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 sm:p-8 min-h-[250px] sm:min-h-[300px]">
           {/* Carousel Content */}
           <div className="flex items-center justify-between h-full">
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow"
+              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 p-1.5 sm:p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow"
             >
-              <ChevronLeft className="text-gray-600" size={20} />
+              <ChevronLeft className="text-gray-600" size={16} />
             </button>
 
-            <div className="flex-1 px-12">
+            <div className="flex-1 px-8 sm:px-12">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                   {slides[currentSlide].title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 leading-relaxed text-sm sm:text-lg">
                   {slides[currentSlide].content}
                 </p>
               </div>
@@ -62,19 +62,19 @@ const About = () => {
 
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow"
+              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 p-1.5 sm:p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow"
             >
-              <ChevronRight className="text-gray-600" size={20} />
+              <ChevronRight className="text-gray-600" size={16} />
             </button>
           </div>
 
           {/* Slide Indicators */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
+                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors ${
                   index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
                 }`}
               />

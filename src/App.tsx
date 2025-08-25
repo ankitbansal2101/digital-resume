@@ -42,7 +42,7 @@ function App() {
       <Header />
       <Navigation activeSection={activeSection} />
       
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-8 sm:space-y-12">
         <About />
         <Experience />
         <Skills />
