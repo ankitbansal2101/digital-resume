@@ -2,9 +2,6 @@ import React from 'react';
 import { Mail, Phone, MapPin, Download, Linkedin, Github } from 'lucide-react';
 
 const Header = () => {
-  const handleDownloadPDF = () => {
-    window.print();
-  };
 
   return (
     <header className="bg-white shadow-sm border-b">
@@ -33,13 +30,14 @@ const Header = () => {
           </div>
 
           <div className="flex justify-center gap-4">
-            <button
-              onClick={handleDownloadPDF}
+            <a
+              href="/Ankit_Bansal_PM.pdf"
+              download="Ankit_Bansal_Resume.pdf"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
             >
               <Download size={18} />
               Download Resume
-            </button>
+            </a>
             <a
               href="https://github.com/ankitbansal2101"
               target="_blank"
