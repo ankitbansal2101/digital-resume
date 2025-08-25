@@ -7,9 +7,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import Chatbot from './components/Chatbot';
+import ChatButton from './components/ChatButton';
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,6 +56,10 @@ function App() {
           <p>&copy; 2025 Ankit Bansal. All rights reserved.</p>
         </div>
       </footer>
+
+      {/* Chatbot Components */}
+      <ChatButton onClick={() => setIsChatOpen(true)} />
+      <Chatbot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
     </div>
   );
 }
