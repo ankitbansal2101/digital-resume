@@ -136,24 +136,24 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 sm:p-4">
-      <div className="bg-white rounded-lg shadow-2xl w-full max-w-2xl h-[90vh] sm:h-[600px] flex flex-col">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-3 sm:p-4">
+      <div className="bg-white rounded-lg shadow-2xl w-full max-w-2xl h-[85vh] max-h-[600px] sm:h-[600px] flex flex-col">
         {/* Header */}
-        <div className="bg-blue-600 text-white p-4 rounded-t-lg flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="bg-blue-500 p-2 rounded-full">
-              <Bot size={20} />
+        <div className="bg-blue-600 text-white p-3 sm:p-4 rounded-t-lg flex items-center justify-between">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="bg-blue-500 p-1.5 sm:p-2 rounded-full">
+              <Bot size={16} className="sm:w-5 sm:h-5" />
             </div>
             <div>
-              <h3 className="font-semibold">Ask about Ankit Bansal</h3>
-              <p className="text-blue-100 text-sm">AI Assistant</p>
+              <h3 className="font-semibold text-sm sm:text-base">Ask about Ankit Bansal</h3>
+              <p className="text-blue-100 text-xs sm:text-sm">AI Assistant</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="text-blue-100 hover:text-white transition-colors p-1"
+            className="text-blue-100 hover:text-white transition-colors p-1 sm:p-1 bg-blue-500 hover:bg-blue-400 rounded-full"
           >
-            <X size={20} />
+            <X size={18} className="sm:w-5 sm:h-5" />
           </button>
         </div>
 
