@@ -4,7 +4,7 @@ import { Calendar, MapPin } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Associate Product Manager 2',
+      title: 'Product',
       company: 'Asteria Aerospace',
       location: 'Bangalore - Remote',
       period: 'Jan 2025 – Present',
