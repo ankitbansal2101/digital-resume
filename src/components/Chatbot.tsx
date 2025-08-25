@@ -47,6 +47,21 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
     }
   }, [isOpen]);
 
+  // Handle viewport height changes for mobile keyboard
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleResize = () => {
+      // Force a scroll to bottom when keyboard opens/closes
+      setTimeout(() => {
+        scrollToBottom();
+      }, 100);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isOpen]);
+
   const handleSendMessage = async () => {
     if (!inputMessage.trim() || isLoading) return;
 
@@ -137,7 +152,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-end sm:items-center justify-center z-50 p-2 sm:p-4">
-      <div className="bg-white rounded-t-2xl sm:rounded-lg shadow-2xl w-full max-w-sm sm:max-w-2xl h-[70vh] sm:h-[600px] sm:max-h-[600px] flex flex-col">
+      <div className="bg-white rounded-t-2xl sm:rounded-lg shadow-2xl w-full max-w-sm sm:max-w-2xl h-[60vh] max-h-[60vh] sm:h-[600px] sm:max-h-[600px] flex flex-col">
         {/* Header */}
         <div className="bg-blue-600 text-white p-3 sm:p-4 rounded-t-2xl sm:rounded-t-lg flex items-center justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
@@ -158,7 +173,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4">
+        <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 min-h-0">
           {/* Predefined Questions */}
           <PredefinedQuestions 
             onQuestionSelect={handlePredefinedQuestionSelect}
@@ -228,7 +243,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Input */}
-        <div className="border-t p-3 sm:p-4">
+        <div className="border-t p-2 sm:p-4 flex-shrink-0">
           <div className="flex gap-2">
             <input
               ref={inputRef}
@@ -243,7 +258,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
             <button
               onClick={handleSendMessage}
               disabled={!inputMessage.trim() || isLoading}
-              className="bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+              className="bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2 flex-shrink-0"
             >
               {isLoading ? (
                 <Loader2 size={16} className="animate-spin" />
@@ -252,7 +267,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               )}
             </button>
           </div>
-          <p className="text-xs text-gray-500 mt-2 hidden sm:block">
+          <p className="text-xs text-gray-500 mt-1 sm:mt-2 hidden sm:block">
             Press Enter to send • This AI can answer questions about Ankit's professional background
           </p>
         </div>
