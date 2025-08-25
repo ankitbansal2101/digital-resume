@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Loader2, MessageCircle, X } from 'lucide-react';
 import { openRouterService, ChatMessage } from '../services/openRouterApi';
 import { extractAllDocuments } from '../utils/pdfParser';
+import PredefinedQuestions from './PredefinedQuestions';
 
 interface Message {
   id: string;
@@ -28,6 +29,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [loadingStage, setLoadingStage] = useState<'generating' | 'refining' | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [showPredefinedQuestions, setShowPredefinedQuestions] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -60,6 +62,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
     setIsLoading(true);
     setLoadingStage('generating');
     setError(null);
+    setShowPredefinedQuestions(false); // Hide predefined questions after user types
 
     try {
       const allDocumentsContent = await extractAllDocuments();
@@ -103,6 +106,29 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
     }
   };
 
+  const handlePredefinedQuestionSelect = (question: string, answer: string) => {
+    // Keep predefined questions visible for multiple selections
+    // setShowPredefinedQuestions(false); // Removed this line
+    
+    // Add user message
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      role: 'user',
+      content: question,
+      timestamp: new Date()
+    };
+
+    // Add assistant response immediately (since we have predefined answer)
+    const assistantMessage: Message = {
+      id: (Date.now() + 1).toString(),
+      role: 'assistant',
+      content: answer,
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage, assistantMessage]);
+  };
+
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
@@ -133,6 +159,11 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          {/* Predefined Questions */}
+          <PredefinedQuestions 
+            onQuestionSelect={handlePredefinedQuestionSelect}
+            isVisible={showPredefinedQuestions}
+          />
           {messages.map((message) => (
             <div
               key={message.id}
@@ -205,7 +236,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="e.g., 'Tell me about Ankit's PM experience' or 'What are his key skills?'"
+              placeholder="Ask anything..."
               className="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               disabled={isLoading}
             />
