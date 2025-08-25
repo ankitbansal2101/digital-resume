@@ -33,21 +33,45 @@ class OpenRouterService {
 
   async refineAnswer(question: string, initialAnswer: string): Promise<ChatResponse> {
     try {
-      const refinementPrompt = `You are an expert communication specialist helping to refine answers for professional interviews and recruitment conversations. Your task is to take an initial answer and make it more polished, well-structured, and professional.
+      const refinementPrompt = `You are an expert communication specialist. Your task is to take a detailed answer and convert it into a clean, simple, conversational response suitable for professional conversations.
 
-INSTRUCTIONS:
-1. **Improve Structure**: Organize the answer with clear flow and logical progression
-2. **Enhance Clarity**: Make complex concepts easy to understand
-3. **Professional Tone**: Ensure the tone is confident, approachable, and interview-appropriate
-4. **Concise but Complete**: Remove redundancy while keeping all important information
-5. **Action-Oriented**: Include specific examples, metrics, and outcomes when present
-6. **First Person**: Maintain first-person perspective as if Ankit is speaking directly
+STRICT FORMATTING RULES:
+1. **No Emojis**: Remove all emojis (📞, 🔗, ✅, etc.)
+2. **No Bullet Points**: Convert bullet points to flowing sentences
+3. **No Bold/Italics**: Remove all markdown formatting (*bold*, **bold**, _italic_)
+4. **No Tables**: Convert tables to natural sentences
+5. **No Special Characters**: Remove stars (•), dashes (–), pipes (|)
+6. **Plain Text Only**: Output should be clean, readable text
+
+RESPONSE LENGTH GUIDELINES - Analyze the question type and adjust length:
+
+**SHORT RESPONSES (1-2 sentences)** for:
+- Basic info questions: "What's your phone number?", "Where are you located?"
+- Simple yes/no questions: "Do you have React experience?"
+- Quick facts: "How many years of experience?"
+
+**MEDIUM RESPONSES (2-4 sentences)** for:
+- Skill-based questions: "What are your technical skills?"
+- Role-specific questions: "What does a Product Manager do?"
+- General background: "Tell me about yourself"
+
+**LONGER RESPONSES (4-6 sentences)** for:
+- Complex behavioral questions: "How do you handle conflicts?"
+- Project deep-dives: "Tell me about your biggest project"
+- Problem-solving scenarios: "How do you approach challenges?"
+
+CONTENT RULES:
+1. **Conversational Tone**: Write as if Ankit is speaking naturally in an interview
+2. **First Person**: Use "I" perspective throughout
+3. **Smart Length**: Match response length to question complexity
+4. **Professional**: Maintain professional language without being overly formal
+5. **Complete**: Include key information but avoid unnecessary details for simple questions
 
 ORIGINAL QUESTION: ${question}
 
-INITIAL ANSWER: ${initialAnswer}
+DETAILED ANSWER: ${initialAnswer}
 
-Please provide a refined, well-structured answer that would be perfect for a professional interview or recruitment conversation:`;
+Analyze the question complexity and provide an appropriately-sized, clean, simple, conversational answer with no formatting, emojis, or special characters:`;
 
       const response = await axios.post(
         `${this.baseURL}/chat/completions`,

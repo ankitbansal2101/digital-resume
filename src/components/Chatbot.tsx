@@ -20,7 +20,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
     {
       id: '1',
       role: 'assistant',
-      content: "Hi! I'm Ankit's AI assistant with access to his complete professional documentation. I can help answer questions about his background, experience, and qualifications - perfect for recruiters and hiring managers!\n\nYou can ask me about:\n• Professional experience and key projects\n• Technical and product management skills\n• Work philosophy, leadership style, and motivations\n• Problem-solving approach and collaboration style\n• Career aspirations and personal interests\n• General PM questions and best practices\n\nI have detailed insights from both his resume and personal background - ask me anything!",
+      content: "Hi! I'm Ankit's AI assistant. Ask me anything about his professional background, experience, skills, or qualifications. I'm here to help!",
       timestamp: new Date()
     }
   ]);
