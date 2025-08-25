@@ -32,11 +32,12 @@ const Header = () => {
           <div className="flex justify-center gap-4">
             <a
               href="/Ankit_Bansal_PM.pdf"
-              download="Ankit_Bansal_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
             >
               <Download size={18} />
-              Download Resume
+              View Resume
             </a>
             <a
               href="https://github.com/ankitbansal2101"
