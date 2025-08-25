@@ -33,12 +33,6 @@ const predefinedQuestions: PredefinedQuestion[] = [
     question: 'What is your notice period?',
     answer: "I'm immediately available and can start right away. There's no notice period required from my end."
   },
-  {
-    id: 'salary-expectations',
-    category: 'Basic Info',
-    question: 'What are your salary expectations?',
-    answer: "My current CTC is 15 LPA and I'm looking for opportunities in the 20 LPA range. However, I'm flexible and open to discussing compensation based on the role scope, growth opportunities, and overall package."
-  },
 
   // Experience & Background
   {
@@ -71,7 +65,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'technical-skills',
     category: 'Skills',
     question: 'What are your core technical skills?',
-    answer: "My technical skills include Python, SQL, and data analytics with tools like Excel, Tableau, and Power BI. I have hands-on experience building AI solutions including RAG chatbots, workflow automation, and rapid prototyping with no-code tools. I'm also proficient with product management tools like Jira, Confluence, Figma, and Miro."
+    answer: "My core product management skills include data analytics with SQL, Excel, Tableau, and Power BI for making data-driven decisions. I'm proficient with product tools like Jira for backlog management, Confluence for documentation, Figma for design collaboration, and Miro for roadmapping. I also have hands-on experience with AI solutions, rapid prototyping, and no-code tools for quick validation and MVP development."
   },
   {
     id: 'ai-experience',
@@ -111,12 +105,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     question: 'How do you handle conflicts in a team?',
     answer: "I handle conflicts by listening actively to all perspectives, focusing discussions on data and user value rather than opinions, and facilitating collaborative problem-solving. I believe in addressing issues early, finding common ground through shared goals, and ensuring everyone feels heard while keeping the team focused on delivering value."
   },
-  {
-    id: 'leadership-style',
-    category: 'Behavioral',
-    question: 'Describe your leadership style',
-    answer: "My leadership style is collaborative and empowering. I believe in setting clear goals, providing context for decisions, and giving team members autonomy to execute. I focus on removing obstacles, facilitating communication, and creating an environment where people feel safe to experiment and learn from failures."
-  },
+
   {
     id: 'prioritize-features',
     category: 'Behavioral',
@@ -148,12 +137,6 @@ const predefinedQuestions: PredefinedQuestion[] = [
     category: 'Culture Fit',
     question: 'What type of work environment do you prefer?',
     answer: "I prefer collaborative environments that value data-driven decision making, rapid experimentation, and continuous learning. I work best in teams that have psychological safety to fail fast and iterate, clear communication channels, and a focus on user value and business impact over just shipping features."
-  },
-  {
-    id: 'remote-work',
-    category: 'Culture Fit',
-    question: 'Are you open to remote work?',
-    answer: "Yes, I'm very comfortable with remote work. I have experience working remotely at Asteria Aerospace and have developed strong skills in asynchronous communication, virtual collaboration, and self-management. I'm equally comfortable with remote, hybrid, or in-person work arrangements."
   },
 
   // Specific Projects
