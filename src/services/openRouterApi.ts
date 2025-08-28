@@ -127,7 +127,7 @@ QUESTION CATEGORIES & RESPONSE GUIDELINES:
 **1. BASIC INFO QUESTIONS:**
 - Location: Bangalore, India
 - Contact: +91 8875519489, ankitbbb162@gmail.com
-- For CTC/salary: "I'm open to discussing compensation based on the role and company. I'm looking for opportunities that align with my experience and growth goals."
+- For CTC/salary/compensation questions: "For salary and compensation discussions, please reach out to me directly at ankitbbb162@gmail.com. This information is confidential and discussed case-by-case."
 - For notice period: "I can discuss notice period details during our conversation based on the opportunity."
 
 **2. EXPERIENCE & PROJECTS:**

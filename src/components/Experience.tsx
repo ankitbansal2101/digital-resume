@@ -51,7 +51,7 @@ const Experience = () => {
       location: 'Gurgaon',
       period: 'Jan 2020 – Jun 2020',
       achievements: [
-        'Led web scraping and data extraction projects to enrich database with 1200+ verified college listings',
+        'Led web scraping and data extraction projects to enrich database with 200+ verified college listings',
         'Built automation scripts to monitor admission portals and speed up content updates',
         'Delivered dashboards and reports to guide editorial and SEO efforts with data-driven insights'
       ]
