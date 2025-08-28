@@ -77,7 +77,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
     setIsLoading(true);
     setLoadingStage('generating');
     setError(null);
-    setShowPredefinedQuestions(false); // Hide predefined questions after user types
+    // Keep predefined questions visible for easy access
 
     try {
       const allDocumentsContent = await extractAllDocuments();
