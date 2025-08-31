@@ -4,7 +4,7 @@ import Navigation from './components/Navigation';
 import About from './components/About';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
-import Projects from './components/Projects';
+import Portfolio from './components/Portfolio';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Chatbot from './components/Chatbot';
@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'experience', 'skills', 'projects', 'education', 'contact'];
+      const sections = ['about', 'experience', 'skills', 'portfolio', 'education', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -42,11 +42,11 @@ function App() {
       <Header />
       <Navigation activeSection={activeSection} />
       
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-8 sm:space-y-12">
+      <main className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-6 sm:space-y-8">
         <About />
         <Experience />
         <Skills />
-        <Projects />
+        <Portfolio />
         <Education />
         <Contact />
       </main>

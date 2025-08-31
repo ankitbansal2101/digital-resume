@@ -3,31 +3,57 @@ import React from 'react';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Core Product Skills',
+      title: 'Product Management',
       skills: [
-        'Product Strategy',
+        'Strategy & Roadmapping',
+        'Agile/Scrum',
+        'Stakeholder Management',
+        'Requirements Gathering',
         'User Research',
-        'Sprint Planning',
-        'Agile & Scrum',
-        'Roadmap Ownership',
-        'Product Analytics',
+        'Metrics & KPIs',
         'A/B Testing',
-        'GTM Enablement',
-        'Cross-functional Collaboration'
+        'Prototyping',
+        'Cross-functional Leadership'
       ]
     },
     {
-      title: 'Tech & Tools',
+      title: 'AI & Technical',
       skills: [
-        'Jira & Confluence',
+        'Generative AI',
+        'RAG Applications',
+        'Workflow Automation',
+        'Python (Advanced)',
+        'Machine Learning',
+        'LLM Integrations',
+        'Computer Vision',
+        'Grounding DINO',
+        'API Research'
+      ]
+    },
+    {
+      title: 'Data & Analytics',
+      skills: [
         'SQL',
-        'Python',
+        'Product Analytics',
+        'Excel',
         'Tableau',
-        'Wireframing',
-        'RAG Chatbots',
-        'AI Feature Scoping',
-        'Drone Telemetry',
-        'B2B SaaS · Fintech · Aerospace'
+        'Clarity',
+        'Data-Driven Decisions',
+        'Performance Metrics',
+        'Business Intelligence'
+      ]
+    },
+    {
+      title: 'Collaboration & Tools',
+      skills: [
+        'Jira',
+        'Confluence',
+        'Figma',
+        'Miro',
+        'GitHub',
+        'Notion',
+        'Sprint Planning',
+        'Backlog Management'
       ]
     }
   ];
@@ -39,7 +65,7 @@ const Skills = () => {
           Skills
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <div key={index} className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">

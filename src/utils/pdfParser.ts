@@ -149,51 +149,38 @@ I am driven by curiosity, continuous learning, and solving real-world problems. 
 export const getResumeContent = (): string => {
   return `
 ANKIT BANSAL
-Bangalore, India | +91 8875519489 | ankitbbb162@gmail.com
-LinkedIn: https://www.linkedin.com/in/ankitbansal2101 | Portfolio: https://ankit-bansal.netlify.app/ | GitHub: https://github.com/ankitbansal2101
+Bangalore, India ◆ +91 8875519489 ◆ ankitbbb162@gmail.com ◆ https://www.linkedin.com/in/ankitbansal2101
+https://ankit-bansal.netlify.app/ | https://github.com/ankitbansal2101
 
-PROFESSIONAL SUMMARY:
-Strategic Product Manager with 4 years of experience delivering B2B SaaS products across aerospace, fintech, and utilities. Skilled in driving end-to-end product lifecycles, defining roadmaps, and leading cross-functional collaboration. Passionate about emerging tech, actively building AI-driven MVPs including RAG chatbots, no-code tools, and automation products.
+PROFESSIONAL SUMMARY
+Strategic AI Product Manager with 4 years of experience building and scaling B2B SaaS products across aerospace, fintech, and utilities. Proven expertise in driving end-to-end product lifecycles, defining roadmaps, and leading cross-functional collaboration. Skilled in AI productization, automation, and analytics, with hands-on experience building AI-driven MVPs (RAG chatbots, no-code workflow tools, object detection, and automation products). Passionate about leveraging Generative AI, data, and emerging tech to solve business problems and accelerate product growth.
 
-SKILLS:
-Product Management: Product Strategy, Roadmapping, Agile/Scrum, Stakeholder Management, Requirements Gathering, User Research, Metrics & KPIs, A/B Testing
-AI & Prototyping: AI-driven Prototyping, Rapid POC Development, No-code MVP Building, Workflow Automation
-Data & Analytics: SQL, Product Analytics, Data-Driven Decision Making, Excel, BI Dashboards (Power BI, Tableau)
+SKILLS
+Product Management: Strategy, Roadmapping, Agile/Scrum, Stakeholder Management, Requirements Gathering, User Research, Metrics & KPIs, Experimentation (A/B Testing, Prototyping)
+AI & Technical: Generative AI, RAG Applications, Workflow Automation, Python (Advanced), Machine Learning, API Research, AI-driven Prototyping, LLM Integrations, Computer Vision (Grounding DINO)
+Data & Analytics: SQL, Product Analytics, Excel, Tableau, Clarity
 Collaboration & Tools: Jira, Confluence, Figma, Miro, GitHub, Notion
 
-WORK HISTORY:
+WORK HISTORY
+● Associate 2 Product Manager | Asteria Aerospace – Bangalore (Remote)| (Jan 2025 – Present)
+- Defined product strategy and roadmap for drone data workflows, driving a 22% increase in client adoption
+- Built and deployed an AI-powered chatbot using RAG trained on SkyDeck's help documentation, reducing support queries by 40%, accelerating user learning, and decreasing trial churn by 12%
+- Ideated and Launched Automated AI object detection using grounding dino and automated smart summaries using LLM
+- Leveraged AI tools to rapidly prototype and build POCs, accelerating design validation and development cycles.
+- Drove backlog grooming, sprint planning, and user feedback loops ensuring 95% on time, high-quality releases.
 
-Product Manager | Asteria Aerospace – Bangalore (Remote) | (Jan 2025 – Present)
-- Defined product strategy and roadmap for drone data workflows, aligning with aerospace client needs
-- Built and deployed an AI-powered chatbot using RAG trained on SkyDeck's help documentation, reducing support queries, accelerating user learning, and decreasing trial customer drop-offs
-- Launched Drone Log Analysis (telemetry anomaly detection) → replaced reliance on third-party tools and drove new customer acquisition
-- Leveraged AI tools to rapidly prototype and build POCs, accelerating design validation and development cycles
-- Drove backlog grooming, sprint planning, and user feedback loops to ensure iterative, high-quality releases
+● Associate 2 Product Manager | IpaySmart (Smart Energy Water) – Noida | (Jan 2023 – Dec 2024)
+- Owned Smart Revenue Recovery, integrating AI-driven payment risk models with dev & data teams; closed a major client in 1 month, boosted on-time payments by 12%, and added $1M to revenue.
+- Launched Landlord Payments portal, securing adoption from 4 enterprise clients, contributing 15% to ARR growth
+- Streamlined backlog management & sprint execution across distributed teams, improving velocity by 20% and reducing scope slippage.
 
-Senior Product Analyst | IPaySmart – Noida | (Jan 2023 – Dec 2024)
-- Owned end-to-end delivery of Smart Revenue Recovery → boosted on-time payments by 12% in 3 months
-- Defined requirements and shipped a Landlord Payments Portal, securing adoption from 4 enterprise clients
-- Drove sprint planning and backlog management across distributed teams using Jira + Confluence
+● Associate Product Manager | Smart Energy Water – Noida | (Jul 2021 – Jan 2023)
+- Partnered with design, dev & QA and closely worked on client requirements to launch 5+ new payment features, driving 25% uplift in client adoption and expanding ARR by $3M.
+- Designed and delivered a Prepaid Billing & Payment solution → closed 4 enterprise deals in 6 months, creating a new revenue stream.
+- Conducted user research and collaborated with stakeholders to prioritize features, ensuring alignment with client needs and long-term strategy.
 
-Product Analyst | Smart Energy Water – Noida | (Jul 2021 – Jan 2023)
-- Partnered with design, dev, and QA to launch 5+ payment features → drove adoption among existing clients and unlocked additional revenue streams
-- Designed and delivered a Prepaid Billing & Payment solution → closed 4 enterprise deals in 6 months, creating a new revenue stream
-- Conducted user research and collaborated with stakeholders to prioritize features, ensuring alignment with client needs and long-term strategy
-
-Business Analyst Intern | Collegedunia – Gurgaon | (Jan 2020 – Jun 2020)
-- Conducted competitor research using Python, SQL, and web scraping → enabled onboarding of 200+ colleges
-- Automated data collection workflows for admissions news → reduced manual effort and improved team efficiency
-- Delivered insights through SQL-driven analysis to support product expansion decisions
-
-EDUCATION:
+EDUCATION
 B.Tech, 2017–2021
 Punjab Engineering College - Chandigarh
-
-KEY ACHIEVEMENTS:
-- 4 years of experience across aerospace, fintech, and utilities sectors
-- Successfully delivered products that boosted on-time payments by 12% and secured 4+ enterprise clients
-- Built AI-powered solutions including RAG chatbots and telemetry anomaly detection systems
-- Led cross-functional teams and drove agile development processes
-- Experience with Python, SQL, and data analytics for business insights
   `.trim();
 };

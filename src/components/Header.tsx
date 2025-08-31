@@ -5,14 +5,17 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm border-b">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
             Ankit Bansal
           </h1>
-          <h2 className="text-lg sm:text-xl text-blue-600 mb-4 font-medium">
-            Product Manager
+          <h2 className="text-lg sm:text-xl text-blue-600 mb-2 font-medium">
+            Strategic AI Product Manager
           </h2>
+          <p className="text-sm sm:text-base text-gray-600 mb-4 max-w-2xl mx-auto">
+            4 years building B2B SaaS products • AI productization & automation • Generative AI & RAG applications
+          </p>
           
           <div className="flex flex-wrap justify-center gap-3 sm:gap-6 mb-6 text-gray-600 text-sm sm:text-base">
             <div className="flex items-center gap-2">

@@ -10,7 +10,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
     { id: 'about', label: 'About', icon: User },
     { id: 'experience', label: 'Experience', icon: Briefcase },
     { id: 'skills', label: 'Skills', icon: Code },
-    { id: 'projects', label: 'Projects', icon: FolderOpen },
+    { id: 'portfolio', label: 'Portfolio', icon: FolderOpen },
     { id: 'education', label: 'Education', icon: GraduationCap },
     { id: 'contact', label: 'Contact', icon: MessageCircle },
   ];
@@ -24,7 +24,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm border-b">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center overflow-x-auto py-3">
           <div className="flex space-x-1 bg-gray-100 rounded-lg p-1">
             {navItems.map(({ id, label, icon: Icon }) => (
