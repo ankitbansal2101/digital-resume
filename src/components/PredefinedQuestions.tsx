@@ -19,7 +19,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'tell-about-yourself',
     category: 'Basic Info',
     question: 'Tell me about yourself',
-    answer: "I'm a strategic Product Manager with 4 years of experience delivering B2B SaaS products across aerospace, fintech, and utilities. Currently at Asteria Aerospace, I lead product strategy for drone data workflows and have built AI-powered solutions like RAG chatbots and telemetry analysis systems. I'm passionate about combining technical expertise with product thinking to solve real-world problems and drive measurable business impact."
+    answer: "I'm a Strategic AI Product Manager with 4 years of experience building and scaling B2B SaaS products across aerospace, fintech, and utilities. I started as a Business Analyst Intern at Collegedunia, progressed through Associate Product Manager at Smart Energy Water and Associate 2 Product Manager at IPaySmart, and now I'm an Associate 2 Product Manager at Asteria Aerospace leading AI-driven product initiatives. I specialize in AI productization, RAG applications, Computer Vision with Grounding DINO, and have delivered solutions that added $1M+ in revenue."
   },
   {
     id: 'location-availability',
@@ -45,19 +45,19 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'current-role',
     category: 'Experience',
     question: 'Tell me about your current role at Asteria Aerospace',
-    answer: "At Asteria Aerospace, I'm the Product Manager leading drone data workflow strategy. I've built an AI-powered RAG chatbot trained on internal documentation that reduced support queries and improved user learning. I also launched Drone Log Analysis for telemetry anomaly detection, which replaced third-party tool dependencies and drove new customer acquisition."
+    answer: "At Asteria Aerospace, I'm the Associate 2 Product Manager leading drone data workflow strategy with a 22% increase in client adoption. I've built an AI-powered RAG chatbot that reduced support queries by 40% and decreased trial churn by 12%. I also ideated and launched automated AI object detection using Grounding DINO and automated smart summaries using LLM, plus drove 95% on-time delivery through effective sprint planning and user feedback loops."
   },
   {
     id: 'biggest-achievement',
     category: 'Experience',
     question: 'What was your biggest achievement in your previous role?',
-    answer: "At IPaySmart, I owned the end-to-end delivery of Smart Revenue Recovery, which improved on-time payments by 12% in just 3 months. I also built the Landlord Payments Portal that secured adoption from 4 enterprise clients. These projects directly impacted revenue and customer satisfaction."
+    answer: "At IPaySmart, I owned Smart Revenue Recovery, integrating AI-driven payment risk models that closed a major client in 1 month, boosted on-time payments by 12%, and added $1M to revenue. I also launched the Landlord Payments portal securing adoption from 4 enterprise clients, contributing 15% to ARR growth, and improved team velocity by 20% through streamlined sprint execution."
   },
   {
     id: 'career-progression',
     category: 'Experience',
     question: 'Walk me through your career progression',
-    answer: "I started as a Business Analyst Intern at Collegedunia, where I automated data workflows using Python and SQL. I then became a Product Analyst at Smart Energy Water, launching payment features and closing 4 enterprise deals. At IPaySmart, I was promoted to Senior Product Analyst, delivering revenue recovery solutions. Now at Asteria Aerospace, I'm a Product Manager leading AI-driven product initiatives in the aerospace sector."
+    answer: "I started as a Business Analyst Intern at Collegedunia, where I automated data workflows using Python and SQL. I then became an Associate Product Manager at Smart Energy Water, launching 5+ payment features that drove 25% client adoption uplift and expanded ARR by $3M. At IPaySmart, I was promoted to Associate 2 Product Manager, delivering AI-driven revenue recovery solutions that added $1M to revenue. Now at Asteria Aerospace, I'm an Associate 2 Product Manager leading AI-driven product initiatives including RAG chatbots and computer vision with Grounding DINO."
   },
 
   // Skills & Technical
@@ -65,13 +65,13 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'technical-skills',
     category: 'Skills',
     question: 'What are your core technical skills?',
-    answer: "My core product management skills include data analytics with SQL, Excel, Tableau, and Power BI for making data-driven decisions. I'm proficient with product tools like Jira for backlog management, Confluence for documentation, Figma for design collaboration, and Miro for roadmapping. I also have hands-on experience with AI solutions, rapid prototyping, and no-code tools for quick validation and MVP development."
+    answer: "My core technical skills span AI & Technical: Generative AI, RAG Applications, Python (Advanced), LLM Integrations, Computer Vision with Grounding DINO, and Workflow Automation. For Product Management: Strategy & Roadmapping, Agile/Scrum, User Research, A/B Testing, and Cross-functional Leadership. Data & Analytics: SQL, Tableau, Clarity, and Business Intelligence. Collaboration Tools: Jira, Confluence, Figma, Miro, GitHub, and Notion."
   },
   {
     id: 'ai-experience',
     category: 'Skills',
     question: 'Do you have experience with AI and machine learning?',
-    answer: "Yes, I'm deeply passionate about AI and have built several AI-driven solutions. I've developed RAG chatbots using OpenAI APIs and LangChain, created telemetry anomaly detection systems, and built rapid AI prototypes for product validation. I actively experiment with emerging AI tools to accelerate development cycles."
+    answer: "Yes, I'm deeply passionate about AI and have built several AI-driven solutions. I've developed RAG chatbots using OpenAI APIs, implemented Computer Vision with Grounding DINO for automated object detection, created automated smart summaries using LLM, and built rapid AI prototypes for product validation. I actively experiment with Generative AI, LLM integrations, and emerging AI tools to accelerate development cycles."
   },
   {
     id: 'pm-approach',
@@ -83,7 +83,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'pm-tools',
     category: 'Skills',
     question: 'What tools do you use for product management?',
-    answer: "I use Jira for backlog management and sprint planning, Confluence for documentation, Figma for design collaboration, and Miro for workshops and roadmapping. For analytics, I work with SQL databases, Excel, Tableau, and Power BI. I also use GitHub for technical collaboration and Notion for knowledge management."
+    answer: "I use Jira for backlog management and sprint planning, Confluence for documentation, Figma for design collaboration, and Miro for workshops and roadmapping. For analytics, I work with SQL databases, Excel, Tableau, and Clarity. I also use GitHub for technical collaboration and Notion for knowledge management. For AI development, I work with Python, LLM APIs, and various AI research tools."
   },
 
   // Behavioral Questions
@@ -150,13 +150,13 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'ai-chatbot',
     category: 'Projects',
     question: 'How did you build the AI chatbot at Asteria?',
-    answer: "I built a RAG chatbot trained on SkyDeck's internal help documentation using OpenAI APIs and vector databases. The process involved extracting and structuring documentation, creating embeddings for semantic search, and building a conversational interface. The chatbot reduced support queries, accelerated user learning, and decreased trial customer drop-offs by providing instant, accurate answers."
+    answer: "I built a RAG chatbot trained on SkyDeck's internal help documentation using OpenAI APIs and vector databases. The process involved extracting and structuring documentation, creating embeddings for semantic search, and building a conversational interface. The chatbot reduced support queries by 40%, accelerated user learning, and decreased trial churn by 12% by providing instant, accurate answers to user questions."
   },
   {
     id: 'revenue-recovery',
     category: 'Projects',
     question: 'What was the Smart Revenue Recovery project about?',
-    answer: "Smart Revenue Recovery was an automated system I designed at IPaySmart to improve on-time payments from tenants. I analyzed payment patterns, identified key intervention points, and built automated workflows that sent targeted reminders and incentives. The system improved on-time payments by 12% in three months and significantly reduced manual effort for property managers."
+    answer: "Smart Revenue Recovery was an AI-driven automated system I designed at IPaySmart, integrating AI-driven payment risk models with dev & data teams. I analyzed payment patterns, identified key intervention points, and built automated workflows with intelligent risk assessment. The system closed a major client in 1 month, improved on-time payments by 12%, added $1M to revenue, and significantly reduced manual effort for property managers."
   }
 ];
 
