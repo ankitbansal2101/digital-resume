@@ -42,7 +42,7 @@ const Portfolio: React.FC = () => {
     {
       id: 'asteria-rag-chatbot',
       title: 'AI-Powered RAG Chatbot',
-      subtitle: 'Associate 2 Product Manager@Asteria Aerospace',
+      subtitle: 'Product@Asteria Aerospace',
       company: 'Asteria Aerospace',
       period: 'Jan 2025 - Present',
       description: 'Built and deployed an AI-powered chatbot using RAG trained on SkyDeck\'s help documentation, reducing support queries by 40%, accelerating user learning, and decreasing trial churn by 12%.',
@@ -71,7 +71,7 @@ const Portfolio: React.FC = () => {
     {
       id: 'ai-object-detection',
       title: 'AI Object Detection & Smart Summaries',
-      subtitle: 'Associate 2 Product Manager@Asteria Aerospace',
+      subtitle: 'Product@Asteria Aerospace',
       company: 'Asteria Aerospace',
       period: 'Jan 2025 - Present',
       description: 'Ideated and launched automated AI object detection using Grounding DINO and automated smart summaries using LLM, enhancing drone data analysis capabilities.',
@@ -100,7 +100,7 @@ const Portfolio: React.FC = () => {
     {
       id: 'smart-revenue-recovery',
       title: 'AI-Driven Revenue Recovery System',
-      subtitle: 'Associate 2 Product Manager@IpaySmart',
+      subtitle: 'Product@IpaySmart',
       company: 'IpaySmart',
       period: 'Jan 2023 - Dec 2024',
       description: 'Owned Smart Revenue Recovery, integrating AI-driven payment risk models with dev & data teams; closed a major client in 1 month, boosted on-time payments by 12%, and added $1M to revenue.',
@@ -129,7 +129,7 @@ const Portfolio: React.FC = () => {
     {
       id: 'prepaid-billing-solution',
       title: 'Payment Features & Billing Solution',
-      subtitle: 'Associate Product Manager@Smart Energy Water',
+      subtitle: 'Product@Smart Energy Water',
       company: 'Smart Energy Water',
       period: 'Jul 2021 - Jan 2023',
       description: 'Partnered with design, dev & QA to launch 5+ new payment features, driving 25% uplift in client adoption and expanding ARR by $3M. Designed and delivered a Prepaid Billing & Payment solution.',
