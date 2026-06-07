@@ -9,21 +9,21 @@ const contactMethods = [
     label: 'Email',
     value: 'ankitbbb162@gmail.com',
     href: 'mailto:ankitbbb162@gmail.com',
-    color: 'text-brand-600 bg-brand-50 border-brand-100',
+    color: 'text-brand-700 bg-brand-50 border-brand-200',
   },
   {
     icon: Phone,
     label: 'Phone',
     value: '+91 8875519489',
     href: 'tel:+918875519489',
-    color: 'text-emerald-600 bg-emerald-50 border-emerald-100',
+    color: 'text-brand-800 bg-brand-100 border-brand-200',
   },
   {
     icon: MessageCircle,
     label: 'WhatsApp',
     value: 'Chat on WhatsApp',
     href: 'https://wa.me/918875519489',
-    color: 'text-green-600 bg-green-50 border-green-100',
+    color: 'text-brand-700 bg-cream-200 border-brand-200',
     external: true,
   },
   {
@@ -31,7 +31,7 @@ const contactMethods = [
     label: 'LinkedIn',
     value: 'Connect with me',
     href: 'https://in.linkedin.com/in/ankitbansal2101',
-    color: 'text-blue-600 bg-blue-50 border-blue-100',
+    color: 'text-brand-800 bg-brand-50 border-brand-200',
     external: true,
   },
 ];
@@ -71,7 +71,7 @@ const Contact = () => {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
         >
-          <h3 className="text-lg font-semibold text-slate-900 mb-5">Contact Information</h3>
+          <h3 className="text-lg font-semibold text-brand-950 mb-5">Contact Information</h3>
           <div className="space-y-3">
             {contactMethods.map((method) => {
               const Icon = method.icon;
@@ -82,18 +82,18 @@ const Contact = () => {
                   target={method.external ? '_blank' : undefined}
                   rel={method.external ? 'noopener noreferrer' : undefined}
                   variants={itemVariants}
-                  className="group flex items-center gap-4 rounded-xl border border-slate-100 bg-slate-50/50 p-4 transition-all duration-200 hover:border-brand-200 hover:bg-brand-50/30 hover:shadow-sm"
+                  className="group flex items-center gap-4 rounded-xl border border-brand-100/80 bg-cream-100/50 p-4 transition-all duration-200 hover:border-brand-300 hover:bg-brand-50/40 hover:shadow-sm"
                 >
                   <div className={`rounded-xl border p-2.5 ${method.color}`}>
                     <Icon size={18} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="text-sm font-medium text-slate-500">{method.label}</h4>
-                    <p className="text-slate-900 font-medium truncate">{method.value}</p>
+                    <h4 className="text-sm font-medium text-stone-500">{method.label}</h4>
+                    <p className="text-brand-950 font-medium truncate">{method.value}</p>
                   </div>
                   <ArrowUpRight
                     size={16}
-                    className="text-slate-300 transition-all duration-200 group-hover:text-brand-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    className="text-brand-300 transition-all duration-200 group-hover:text-brand-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   />
                 </motion.a>
               );
@@ -102,31 +102,31 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className="lg:col-span-2 section-card p-6 sm:p-8 bg-gradient-to-br from-slate-900 to-brand-950 text-white flex flex-col justify-between"
+          className="lg:col-span-2 section-card p-6 sm:p-8 bg-gradient-to-br from-brand-100 via-cream-100 to-brand-50 border-brand-200/60 flex flex-col justify-between"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-brand-300 mb-4">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-brand-200/80 bg-cream-50/80 px-3 py-1 text-xs font-medium text-brand-800 mb-4">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-600" />
               Available for opportunities
             </div>
-            <h3 className="text-xl font-bold tracking-tight">Let's build something impactful.</h3>
-            <p className="mt-3 text-sm leading-relaxed text-slate-400">
+            <h3 className="font-display text-xl font-bold tracking-tight text-brand-950">Let's build something impactful.</h3>
+            <p className="mt-3 text-sm leading-relaxed text-stone-600">
               Whether you're hiring for a PM role, exploring a partnership, or want to
               discuss AI product strategy, reach out and I'll respond promptly.
             </p>
           </div>
 
-          <div className="mt-6 flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
-            <div className="rounded-lg border border-white/10 bg-white/10 p-2">
-              <MapPin size={18} className="text-brand-300" />
+          <div className="mt-6 flex items-center gap-3 rounded-xl border border-brand-200/60 bg-cream-50/80 p-4">
+            <div className="rounded-lg border border-brand-200/60 bg-brand-50 p-2">
+              <MapPin size={18} className="text-brand-700" />
             </div>
             <div>
-              <p className="text-xs text-slate-400">Based in</p>
-              <p className="font-medium">Mumbai, India</p>
+              <p className="text-xs text-stone-500">Based in</p>
+              <p className="font-medium text-brand-900">Mumbai, India</p>
             </div>
           </div>
         </motion.div>

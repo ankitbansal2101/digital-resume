@@ -178,16 +178,16 @@ const PredefinedQuestions: React.FC<PredefinedQuestionsProps> = ({ onQuestionSel
   const categories = Array.from(new Set(predefinedQuestions.map(q => q.category)));
 
   return (
-    <div className="mb-3 sm:mb-4 p-2.5 sm:p-4 bg-gray-50 rounded-lg border">
+    <div className="mb-3 sm:mb-4 p-2.5 sm:p-4 bg-cream-100/80 rounded-lg border border-brand-100">
       <div className="flex items-center gap-2 mb-2 sm:mb-3">
-        <MessageSquare size={12} className="sm:w-[14px] sm:h-[14px] text-blue-600" />
-        <h3 className="text-xs sm:text-sm font-medium text-gray-700">Quick Questions</h3>
+        <MessageSquare size={12} className="sm:w-[14px] sm:h-[14px] text-brand-600" />
+        <h3 className="text-xs sm:text-sm font-medium text-brand-900">Quick Questions</h3>
       </div>
       
       <div className="space-y-2 sm:space-y-3">
         {categories.map(category => (
           <div key={category}>
-            <h4 className="text-xs font-medium text-gray-500 mb-1.5 sm:mb-2">{category}</h4>
+            <h4 className="text-xs font-medium text-stone-500 mb-1.5 sm:mb-2">{category}</h4>
             <div className="flex flex-wrap gap-1 sm:gap-2">
               {predefinedQuestions
                 .filter(q => q.category === category)
@@ -195,7 +195,7 @@ const PredefinedQuestions: React.FC<PredefinedQuestionsProps> = ({ onQuestionSel
                   <button
                     key={question.id}
                     onClick={() => onQuestionSelect(question.question, question.answer)}
-                    className="text-xs bg-white border border-gray-200 text-gray-700 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors leading-tight"
+                    className="text-xs bg-cream-50 border border-brand-200/60 text-brand-800 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full hover:bg-brand-50 hover:border-brand-300 hover:text-brand-900 transition-colors leading-tight"
                   >
                     {question.question}
                   </button>

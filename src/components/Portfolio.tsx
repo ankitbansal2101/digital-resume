@@ -228,7 +228,7 @@ const sideHustles: ProjectCardItem[] = [
       'Managed tutor onboarding, curriculum, and customer acquisition end-to-end',
     ],
     tags: ['EdTech', 'Founder', 'Tutoring', 'Revenue', 'Operations'],
-    gradient: 'from-slate-800 to-brand-900',
+    gradient: 'from-brand-800 to-brand-900',
     icon: <GraduationCap className="text-white" size={24} />,
     metrics: [
       { label: 'Students Trained', value: '500+', icon: <Users className="text-brand-600" size={16} /> },
@@ -341,7 +341,7 @@ const Portfolio: React.FC = () => {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-6 text-center">
+          <h3 className="text-lg sm:text-xl font-bold text-brand-950 mb-6 text-center">
             Certifications & <span className="gradient-text">Achievements</span>
           </h3>
 
@@ -358,8 +358,8 @@ const Portfolio: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <div className="rounded-lg border border-white bg-white p-2 shadow-sm">{cert.icon}</div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-slate-900 mb-1 text-sm">{cert.title}</h4>
-                    <p className="text-slate-600 text-xs mb-2">{cert.subtitle}</p>
+                    <h4 className="font-semibold text-brand-950 mb-1 text-sm">{cert.title}</h4>
+                    <p className="text-stone-600 text-xs mb-2">{cert.subtitle}</p>
                     {cert.link && (
                       <a
                         href={cert.link}

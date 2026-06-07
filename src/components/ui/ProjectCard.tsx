@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item }) => {
   ];
 
   return (
-    <div className="overflow-hidden flex flex-col h-full rounded-xl border border-slate-200/80 bg-white shadow-sm">
+    <div className="overflow-hidden flex flex-col h-full rounded-xl border border-brand-200/60 bg-cream-50 shadow-sm">
       <div className={`relative bg-gradient-to-br ${item.gradient} px-6 py-5 sm:px-8 sm:py-6 text-white overflow-hidden`}>
         <div className="absolute inset-0 hero-grid opacity-20" />
         <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-white/10 blur-2xl" />
@@ -82,20 +82,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item }) => {
       </div>
 
       <div className="flex-1 p-6 sm:p-8">
-        <p className="text-sm sm:text-base leading-relaxed text-slate-600 mb-6">{item.description}</p>
+        <p className="text-sm sm:text-base leading-relaxed text-stone-600 mb-6">{item.description}</p>
 
         <div className="grid lg:grid-cols-2 gap-6 mb-6">
           {item.metrics && (
             <div>
-              <h5 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+              <h5 className="text-xs font-semibold uppercase tracking-wider text-stone-400 mb-3">
                 Impact Metrics
               </h5>
               <div className="grid grid-cols-3 gap-2">
                 {item.metrics.map((metric) => (
                   <div key={metric.label} className="metric-card p-3">
                     <div className="flex justify-center mb-1">{metric.icon}</div>
-                    <div className="font-bold text-sm text-slate-900 text-center">{metric.value}</div>
-                    <div className="text-[10px] sm:text-xs text-slate-500 text-center leading-tight mt-0.5">
+                    <div className="font-bold text-sm text-brand-950 text-center">{metric.value}</div>
+                    <div className="text-[10px] sm:text-xs text-stone-500 text-center leading-tight mt-0.5">
                       {metric.label}
                     </div>
                   </div>
@@ -105,12 +105,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item }) => {
           )}
 
           <div className={item.metrics ? '' : 'lg:col-span-2'}>
-            <h5 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+            <h5 className="text-xs font-semibold uppercase tracking-wider text-stone-400 mb-3">
               Key Achievements
             </h5>
             <ul className="space-y-2">
               {item.achievements.map((achievement) => (
-                <li key={achievement} className="flex items-start gap-2.5 text-sm text-slate-600">
+                <li key={achievement} className="flex items-start gap-2.5 text-sm text-stone-600">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
                   <span>{achievement}</span>
                 </li>
@@ -119,7 +119,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item }) => {
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-100 bg-slate-50/80 p-4 space-y-3">
+        <div className="rounded-xl border border-brand-100 bg-cream-100/80 p-4 space-y-3">
           <div className="flex flex-wrap gap-1.5">
             {item.tags.map((tag) => (
               <span key={tag} className="tag text-xs">
@@ -138,7 +138,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item }) => {
                   rel="noopener noreferrer"
                   className={
                     link.type === 'github'
-                      ? 'btn-secondary text-xs px-3 py-2 text-brand-700 border-brand-100 bg-white'
+                      ? 'btn-secondary text-xs px-3 py-2 text-brand-700 border-brand-100 bg-cream-50'
                       : 'btn-primary text-xs px-3 py-2'
                   }
                   whileHover={{ scale: 1.02 }}

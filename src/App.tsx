@@ -38,7 +38,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-cream-100">
       <Header />
       <Navigation activeSection={activeSection} />
 
@@ -51,14 +51,15 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="border-t border-slate-200 bg-slate-900 text-slate-400 py-10 mt-4">
+      <footer className="border-t border-brand-200/60 bg-cream-200/80 text-stone-600 py-10 mt-4">
         <div className="section-container px-4 sm:px-6 lg:px-8">
+          <div className="luxury-divider mb-8" />
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-center sm:text-left">
-              <p className="font-semibold text-white">Ankit Bansal</p>
-              <p className="text-sm mt-1">Strategic AI Product Manager</p>
+              <p className="font-display text-lg font-semibold text-brand-900">Ankit Bansal</p>
+              <p className="text-sm mt-1 text-stone-500">Strategic AI Product Manager</p>
             </div>
-            <p className="text-sm">&copy; 2025 Ankit Bansal. All rights reserved.</p>
+            <p className="text-sm text-stone-500">&copy; 2025 Ankit Bansal. All rights reserved.</p>
           </div>
         </div>
       </footer>

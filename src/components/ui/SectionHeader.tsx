@@ -30,7 +30,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
         <span className="mb-3 inline-block rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-600">
           {eyebrow || title.split(' ')[0]}
         </span>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900">
+        <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-brand-950">
           {highlight ? (
             <>
               {title}{' '}
@@ -42,7 +42,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
         </h2>
         {subtitle && (
           <p
-            className={`mt-3 max-w-2xl text-base sm:text-lg leading-relaxed text-slate-600 ${
+            className={`mt-3 max-w-2xl text-base sm:text-lg leading-relaxed text-stone-600 ${
               isCenter ? 'mx-auto' : ''
             }`}
           >

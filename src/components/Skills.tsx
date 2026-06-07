@@ -28,7 +28,7 @@ const skillCategories = [
   {
     title: 'AI & Technical',
     icon: Brain,
-    color: 'text-violet-600 bg-violet-50 border-violet-100',
+    color: 'text-brand-700 bg-brand-100/80 border-brand-200',
     skills: [
       'Generative AI',
       'RAG Applications',
@@ -44,7 +44,7 @@ const skillCategories = [
   {
     title: 'Data & Analytics',
     icon: BarChart3,
-    color: 'text-emerald-600 bg-emerald-50 border-emerald-100',
+    color: 'text-brand-800 bg-cream-200/60 border-brand-200',
     skills: [
       'SQL',
       'Product Analytics',
@@ -59,7 +59,7 @@ const skillCategories = [
   {
     title: 'Collaboration & Tools',
     icon: Users,
-    color: 'text-amber-600 bg-amber-50 border-amber-100',
+    color: 'text-brand-600 bg-cream-100 border-brand-200',
     skills: [
       'Jira',
       'Confluence',
@@ -119,7 +119,7 @@ const Skills = () => {
                 <div className={`rounded-xl border p-2.5 ${category.color}`}>
                   <Icon size={20} />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900">{category.title}</h3>
+                <h3 className="text-lg font-semibold text-brand-950">{category.title}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (

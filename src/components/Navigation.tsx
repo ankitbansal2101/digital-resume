@@ -32,13 +32,13 @@ const Navigation = ({ activeSection }: NavigationProps) => {
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'border-b border-slate-200/80 bg-white/85 shadow-sm backdrop-blur-xl'
-          : 'border-b border-transparent bg-white/70 backdrop-blur-md'
+          ? 'border-b border-brand-200/60 bg-cream-50/90 shadow-sm backdrop-blur-xl'
+          : 'border-b border-brand-100/50 bg-cream-100/80 backdrop-blur-md'
       }`}
     >
       <div className="section-container px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center overflow-x-auto py-3 scrollbar-hide">
-          <div className="relative flex gap-1 rounded-xl border border-slate-200/80 bg-slate-100/80 p-1">
+          <div className="relative flex gap-1 rounded-xl border border-brand-200/60 bg-cream-200/50 p-1 shadow-sm">
             {navItems.map(({ id, label, icon: Icon }) => {
               const isActive = activeSection === id;
               return (
@@ -46,13 +46,13 @@ const Navigation = ({ activeSection }: NavigationProps) => {
                   key={id}
                   onClick={() => scrollToSection(id)}
                   className={`relative flex items-center gap-2 rounded-lg px-3 sm:px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-                    isActive ? 'text-white' : 'text-slate-600 hover:text-brand-600'
+                    isActive ? 'text-cream-50' : 'text-stone-600 hover:text-brand-700'
                   }`}
                 >
                   {isActive && (
                     <motion.span
                       layoutId="nav-pill"
-                      className="absolute inset-0 rounded-lg bg-brand-600 shadow-sm"
+                      className="absolute inset-0 rounded-lg bg-brand-700 shadow-sm"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}

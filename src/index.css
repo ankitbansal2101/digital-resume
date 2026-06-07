@@ -10,7 +10,10 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-800 font-sans;
+    @apply bg-cream-100 text-stone-800 font-sans;
+    background-image:
+      radial-gradient(ellipse 120% 80% at 50% -30%, rgb(240 232 220 / 0.6), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 50%, rgb(245 239 230 / 0.5), transparent);
   }
 
   ::selection {
@@ -24,43 +27,47 @@
   }
 
   .section-card {
-    @apply bg-white rounded-2xl border border-slate-200/80 shadow-card;
+    @apply bg-cream-50/90 rounded-2xl border border-brand-200/50 shadow-luxury backdrop-blur-sm;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-brand-600 to-brand-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-800 via-brand-600 to-brand-500 bg-clip-text text-transparent;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-brand-700 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-semibold text-cream-50 shadow-sm transition-all duration-200 hover:bg-brand-800 hover:shadow-card-hover hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition-all duration-200 hover:border-slate-300 hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-cream-50 px-5 py-2.5 text-sm font-semibold text-brand-800 shadow-sm transition-all duration-200 hover:border-brand-300 hover:bg-brand-50 hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .tag {
-    @apply inline-flex items-center rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700;
+    @apply inline-flex items-center rounded-full border border-brand-200/80 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-800;
   }
 
   .metric-card {
-    @apply rounded-xl border border-slate-100 bg-slate-50/80 p-3 text-center transition-colors duration-200 hover:border-brand-100 hover:bg-brand-50/50;
+    @apply rounded-xl border border-brand-100/80 bg-cream-100/80 p-3 text-center transition-colors duration-200 hover:border-brand-200 hover:bg-brand-50/60;
+  }
+
+  .luxury-divider {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-brand-300/60 to-transparent;
   }
 }
 
 @layer utilities {
   .hero-grid {
     background-image:
-      linear-gradient(to right, rgb(255 255 255 / 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 0.03) 1px, transparent 1px);
+      linear-gradient(to right, rgb(139 115 85 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(139 115 85 / 0.06) 1px, transparent 1px);
     background-size: 48px 48px;
   }
 
   .mesh-gradient {
     background:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgb(99 102 241 / 0.25), transparent),
-      radial-gradient(ellipse 60% 40% at 100% 0%, rgb(79 70 229 / 0.15), transparent),
-      radial-gradient(ellipse 50% 30% at 0% 100%, rgb(99 102 241 / 0.1), transparent);
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgb(176 155 110 / 0.18), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 0%, rgb(205 184 150 / 0.14), transparent),
+      radial-gradient(ellipse 50% 30% at 0% 100%, rgb(184 155 110 / 0.1), transparent);
   }
 
   .scrollbar-hide {

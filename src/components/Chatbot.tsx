@@ -151,22 +151,22 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-end sm:items-center justify-center z-50 p-2 sm:p-4">
-      <div className="bg-white rounded-t-2xl sm:rounded-lg shadow-2xl w-full max-w-sm sm:max-w-2xl h-[60vh] max-h-[60vh] sm:h-[600px] sm:max-h-[600px] flex flex-col">
+    <div className="fixed inset-0 bg-brand-950/40 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-2 sm:p-4">
+      <div className="bg-cream-50 rounded-t-2xl sm:rounded-2xl shadow-luxury border border-brand-200/60 w-full max-w-sm sm:max-w-2xl h-[60vh] max-h-[60vh] sm:h-[600px] sm:max-h-[600px] flex flex-col">
         {/* Header */}
-        <div className="bg-blue-600 text-white p-3 sm:p-4 rounded-t-2xl sm:rounded-t-lg flex items-center justify-between">
+        <div className="bg-brand-800 text-cream-50 p-3 sm:p-4 rounded-t-2xl sm:rounded-t-2xl flex items-center justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="bg-blue-500 p-1.5 sm:p-2 rounded-full">
+            <div className="bg-brand-700/80 p-1.5 sm:p-2 rounded-full border border-brand-600/30">
               <Bot size={16} className="sm:w-5 sm:h-5" />
             </div>
             <div>
-              <h3 className="font-semibold text-sm sm:text-base">Ask about Ankit Bansal</h3>
-              <p className="text-blue-100 text-xs sm:text-sm">AI Assistant</p>
+              <h3 className="font-semibold text-sm sm:text-base font-display">Ask about Ankit Bansal</h3>
+              <p className="text-brand-200 text-xs sm:text-sm">AI Assistant</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="text-blue-100 hover:text-white transition-colors p-1 sm:p-1 bg-blue-500 hover:bg-blue-400 rounded-full"
+            className="text-brand-200 hover:text-cream-50 transition-colors p-1 sm:p-1 bg-brand-700/80 hover:bg-brand-600 rounded-full border border-brand-600/30"
           >
             <X size={18} className="sm:w-5 sm:h-5" />
           </button>
@@ -185,22 +185,22 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {message.role === 'assistant' && (
-                <div className="bg-blue-100 p-2 rounded-full flex-shrink-0 mt-1">
-                  <Bot size={16} className="text-blue-600" />
+                <div className="bg-brand-100 p-2 rounded-full flex-shrink-0 mt-1">
+                  <Bot size={16} className="text-brand-700" />
                 </div>
               )}
               
               <div
                 className={`max-w-[280px] sm:max-w-xs lg:max-w-md px-3 sm:px-4 py-2 rounded-lg ${
                   message.role === 'user'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-900'
+                    ? 'bg-brand-700 text-cream-50'
+                    : 'bg-cream-100 text-brand-950 border border-brand-100'
                 }`}
               >
                 <p className="text-sm whitespace-pre-wrap">{message.content}</p>
                 <p
                   className={`text-xs mt-1 ${
-                    message.role === 'user' ? 'text-blue-100' : 'text-gray-500'
+                    message.role === 'user' ? 'text-brand-200' : 'text-stone-500'
                   }`}
                 >
                   {formatTime(message.timestamp)}
@@ -208,8 +208,8 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               </div>
 
               {message.role === 'user' && (
-                <div className="bg-blue-600 p-2 rounded-full flex-shrink-0 mt-1">
-                  <User size={16} className="text-white" />
+                <div className="bg-brand-700 p-2 rounded-full flex-shrink-0 mt-1">
+                  <User size={16} className="text-cream-50" />
                 </div>
               )}
             </div>
@@ -217,10 +217,10 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
 
           {isLoading && (
             <div className="flex gap-3 justify-start">
-              <div className="bg-blue-100 p-2 rounded-full flex-shrink-0 mt-1">
-                <Bot size={16} className="text-blue-600" />
+              <div className="bg-brand-100 p-2 rounded-full flex-shrink-0 mt-1">
+                <Bot size={16} className="text-brand-700" />
               </div>
-              <div className="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg">
+              <div className="bg-cream-100 text-brand-950 border border-brand-100 px-4 py-2 rounded-lg">
                 <div className="flex items-center gap-2">
                   <Loader2 size={16} className="animate-spin" />
                   <span className="text-sm">
@@ -243,7 +243,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Input */}
-        <div className="border-t p-2 sm:p-4 flex-shrink-0">
+        <div className="border-t border-brand-100 p-2 sm:p-4 flex-shrink-0 bg-cream-50">
           <div className="flex gap-2">
             <input
               ref={inputRef}
@@ -252,13 +252,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Ask anything..."
-              className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 border border-brand-200 bg-cream-50 rounded-lg px-3 py-2 text-sm text-brand-950 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
               disabled={isLoading}
             />
             <button
               onClick={handleSendMessage}
               disabled={!inputMessage.trim() || isLoading}
-              className="bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2 flex-shrink-0"
+              className="bg-brand-700 text-cream-50 px-3 sm:px-4 py-2 rounded-lg hover:bg-brand-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2 flex-shrink-0"
             >
               {isLoading ? (
                 <Loader2 size={16} className="animate-spin" />
@@ -267,7 +267,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               )}
             </button>
           </div>
-          <p className="text-xs text-gray-500 mt-1 sm:mt-2 hidden sm:block">
+          <p className="text-xs text-stone-500 mt-1 sm:mt-2 hidden sm:block">
             Press Enter to send • This AI can answer questions about Ankit's professional background
           </p>
         </div>

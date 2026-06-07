@@ -22,9 +22,9 @@ const Experience = () => {
         'Delivered end-to-end integrations with Zoho CRM, PickyAssist WhatsApp, and Servetel Cloud Telephony, coordinating across engineering, implementation, and customer teams to support enterprise-specific business processes and data synchronization requirements'
       ],
       keyMetrics: [
-        { label: 'Onboarding Time', value: '-90%', icon: <TrendingUp className="text-green-600" size={16} /> },
-        { label: 'Stakeholder Interviews', value: '30+', icon: <Users className="text-blue-600" size={16} /> },
-        { label: 'Enterprise Integrations', value: '3', icon: <Zap className="text-purple-600" size={16} /> }
+        { label: 'Onboarding Time', value: '-90%', icon: <TrendingUp className="text-brand-700" size={16} /> },
+        { label: 'Stakeholder Interviews', value: '30+', icon: <Users className="text-brand-600" size={16} /> },
+        { label: 'Enterprise Integrations', value: '3', icon: <Zap className="text-brand-600" size={16} /> }
       ],
       tags: ['B2B SaaS', 'PropTech', 'Martech', 'AI Voice Agent', 'CRM Architecture', 'Enterprise Integrations']
     },
@@ -45,9 +45,9 @@ const Experience = () => {
         'Drove backlog grooming, sprint planning, and user feedback loops ensuring 95% on-time, high-quality releases'
       ],
       keyMetrics: [
-        { label: 'Client Adoption', value: '+22%', icon: <TrendingUp className="text-green-600" size={16} /> },
-        { label: 'Support Queries', value: '-40%', icon: <Zap className="text-blue-600" size={16} /> },
-        { label: 'On-time Delivery', value: '95%', icon: <Target className="text-purple-600" size={16} /> }
+        { label: 'Client Adoption', value: '+22%', icon: <TrendingUp className="text-brand-700" size={16} /> },
+        { label: 'Support Queries', value: '-40%', icon: <Zap className="text-brand-600" size={16} /> },
+        { label: 'On-time Delivery', value: '95%', icon: <Target className="text-brand-600" size={16} /> }
       ],
       tags: ['AI Product Strategy', 'RAG Applications', 'Computer Vision', 'Drone Technology']
     },
@@ -68,9 +68,9 @@ const Experience = () => {
         'Led cross-functional collaboration to deliver enterprise-grade payment solutions'
       ],
       keyMetrics: [
-        { label: 'Revenue Added', value: '$1M', icon: <TrendingUp className="text-green-600" size={16} /> },
-        { label: 'ARR Growth', value: '+15%', icon: <Target className="text-blue-600" size={16} /> },
-        { label: 'Team Velocity', value: '+20%', icon: <Zap className="text-purple-600" size={16} /> }
+        { label: 'Revenue Added', value: '$1M', icon: <TrendingUp className="text-brand-700" size={16} /> },
+        { label: 'ARR Growth', value: '+15%', icon: <Target className="text-brand-600" size={16} /> },
+        { label: 'Team Velocity', value: '+20%', icon: <Zap className="text-brand-600" size={16} /> }
       ],
       tags: ['AI-driven Risk Models', 'Revenue Recovery', 'Enterprise B2B', 'Payment Solutions']
     },
@@ -91,9 +91,9 @@ const Experience = () => {
         'Led product initiatives that significantly improved client satisfaction and retention rates'
       ],
       keyMetrics: [
-        { label: 'Client Adoption', value: '+25%', icon: <TrendingUp className="text-green-600" size={16} /> },
-        { label: 'ARR Expansion', value: '$3M', icon: <Target className="text-blue-600" size={16} /> },
-        { label: 'Enterprise Deals', value: '4', icon: <Users className="text-purple-600" size={16} /> }
+        { label: 'Client Adoption', value: '+25%', icon: <TrendingUp className="text-brand-700" size={16} /> },
+        { label: 'ARR Expansion', value: '$3M', icon: <Target className="text-brand-600" size={16} /> },
+        { label: 'Enterprise Deals', value: '4', icon: <Users className="text-brand-600" size={16} /> }
       ],
       tags: ['Payment Solutions', 'Client Requirements', 'Revenue Growth', 'User Research']
     },
@@ -112,9 +112,9 @@ const Experience = () => {
         'Delivered dashboards and reports to guide editorial and SEO efforts with data-driven insights'
       ],
       keyMetrics: [
-        { label: 'College Listings', value: '200+', icon: <Users className="text-green-600" size={16} /> },
-        { label: 'Automation', value: 'Scripts', icon: <Zap className="text-blue-600" size={16} /> },
-        { label: 'Data Insights', value: 'Driven', icon: <Target className="text-purple-600" size={16} /> }
+        { label: 'College Listings', value: '200+', icon: <Users className="text-brand-700" size={16} /> },
+        { label: 'Automation', value: 'Scripts', icon: <Zap className="text-brand-600" size={16} /> },
+        { label: 'Data Insights', value: 'Driven', icon: <Target className="text-brand-600" size={16} /> }
       ],
       tags: ['Data Extraction', 'Automation', 'Analytics', 'EdTech']
     }
@@ -181,12 +181,12 @@ const Experience = () => {
       <div className="max-w-full mx-auto">
         {/* Career Timeline Visualization */}
         <motion.div 
-          className="mb-8 section-card p-6 sm:p-8 bg-gradient-to-br from-brand-50/50 to-slate-50"
+          className="mb-8 section-card p-6 sm:p-8 bg-gradient-to-br from-brand-50/80 to-cream-200/80"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-6 text-center">
+          <h3 className="text-lg sm:text-xl font-bold text-brand-950 mb-6 text-center">
             Career <span className="gradient-text">Journey</span>
           </h3>
           
@@ -202,8 +202,8 @@ const Experience = () => {
                   <div className={`bg-gradient-to-br ${exp.gradient} rounded-full p-3 mb-2 shadow-lg`}>
                     <div className="w-5 h-5 text-white">{exp.icon}</div>
                   </div>
-                  <h4 className="font-semibold text-gray-900 text-xs">{exp.company}</h4>
-                  <p className="text-gray-600 text-xs">{exp.period.split(' – ')[0]}</p>
+                  <h4 className="font-semibold text-brand-950 text-xs">{exp.company}</h4>
+                  <p className="text-stone-500 text-xs">{exp.period.split(' – ')[0]}</p>
                 </motion.div>
                 
                 {index < experiences.length - 1 && (
@@ -290,8 +290,8 @@ const Experience = () => {
                           <div className="flex items-center justify-center mb-1">
                             {metric.icon}
                           </div>
-                          <div className="font-bold text-sm text-gray-900">{metric.value}</div>
-                          <div className="text-xs text-gray-600">{metric.label}</div>
+                          <div className="font-bold text-sm text-brand-950">{metric.value}</div>
+                          <div className="text-xs text-stone-500">{metric.label}</div>
                         </motion.div>
                       ))}
                     </div>
@@ -299,10 +299,10 @@ const Experience = () => {
 
                   {/* Key Achievements */}
                   <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-3 text-base">Key Achievements</h4>
+                    <h4 className="font-semibold text-brand-950 mb-3 text-base">Key Achievements</h4>
                     <ul className="space-y-2">
                       {exp.achievements.slice(0, 4).map((achievement, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-gray-700">
+                        <li key={idx} className="flex items-start gap-2 text-stone-600">
                           <motion.div 
                             className="bg-brand-100 rounded-full p-0.5 mt-1 flex-shrink-0"
                             initial={{ scale: 0 }}
