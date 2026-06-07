@@ -44,14 +44,16 @@ export const getAboutContent = (): string => {
 DETAILED BACKGROUND & PERSONAL INSIGHTS:
 
 PROFESSIONAL OVERVIEW:
-I am a strategic Product Manager based in Bangalore, India, with over 4 years of experience building and scaling B2B SaaS products across aerospace, fintech, and utilities. My approach to product management goes beyond building features — I focus on delivering tangible value to users, understanding their problems deeply, and designing solutions that are both innovative and practical.
+I am a strategic Product Manager based in Mumbai, India, with over 4 years of experience building and scaling B2B SaaS products across proptech, aerospace, fintech, and utilities. My approach to product management goes beyond building features, I focus on delivering tangible value to users, understanding their problems deeply, and designing solutions that are both innovative and practical.
 
 CAREER JOURNEY & ACHIEVEMENTS:
 My professional journey started as a Business Analyst Intern at Collegedunia, where I combined Python, SQL, and web scraping to automate workflows and deliver actionable insights. This foundation in data-driven decision-making shaped my approach to product management: grounding decisions in real user behavior and metrics.
 
 I progressed to roles in Smart Energy Water and IPaySmart, where I owned end-to-end product delivery, from requirement gathering to feature launch. I designed solutions that unlocked new revenue streams, drove adoption, and improved operational efficiency. For example, at IPaySmart, my work on Smart Revenue Recovery improved on-time payments by 12% in just three months, and the Landlord Payments Portal secured adoption from multiple enterprise clients.
 
-Currently, at Asteria Aerospace, I am leading product strategy for drone data workflows. I have built AI-powered tools, such as RAG chatbots trained on internal documentation, to improve user learning and reduce support overhead. I have also launched Drone Log Analysis to detect telemetry anomalies, helping clients get actionable insights faster while reducing reliance on third-party tools.
+Currently, at Sirrus.ai in Mumbai, I own the Engagement & Martech product roadmap for a B2B SaaS CRM platform serving real estate developers, driving strategy across lead management, customer journeys, AI-powered engagement, and workflow automation. I've conducted 30+ stakeholder interviews with CMOs, Sales Heads, Customer Success teams, and frontline CRM users across 8+ client visits. I led a configurable CRM architecture rollout (Blueprint Management, Dynamic Lead Layouts, Form Configuration) using AI-generated prototypes, reducing customer onboarding from 3 months to 15 days (~90%). I also launched an AI Voice Agent integrated with Exotel and delivered end-to-end integrations with Zoho CRM, PickyAssist WhatsApp, and Servetel Cloud Telephony.
+
+Previously, at Asteria Aerospace (Jan 2025 – Oct 2025), I led product strategy for drone data workflows. I built AI-powered RAG chatbots trained on internal documentation, reducing support queries by 40% and trial churn by 12%. I also launched automated AI object detection using Grounding DINO and smart summaries using LLM.
 
 AI & TECHNOLOGY EXPERTISE:
 I am deeply passionate about emerging technologies and AI. I actively build AI-driven MVPs, no-code tools, and automation products, constantly exploring ways to accelerate prototyping and development cycles. I enjoy combining technical experimentation with product thinking, which allows me to validate ideas rapidly and deliver high-impact solutions.
@@ -63,7 +65,7 @@ Key AI accomplishments include:
 - Applying data analytics (SQL, Excel, Tableau, Power BI) to guide product strategy, measure outcomes, and identify growth opportunities
 
 PRODUCT LEADERSHIP & WORK PHILOSOPHY:
-I see product management as more than delivering features — it's about creating value for users and driving business impact. I excel at end-to-end product ownership: from ideation, research, and roadmap planning to design validation, agile execution, and outcome measurement.
+I see product management as more than delivering features, it's about creating value for users and driving business impact. I excel at end-to-end product ownership: from ideation, research, and roadmap planning to design validation, agile execution, and outcome measurement.
 
 My collaboration style is cross-functional and inclusive, working closely with design, engineering, QA, and stakeholders to align priorities and deliver results. I use data-driven decision making combined with qualitative insights to prioritize features and optimize workflows.
 
@@ -93,7 +95,7 @@ AVAILABILITY & COMPENSATION:
 - Notice period: Immediately available
 - Current CTC: 15 LPA
 - Expected CTC: 20 LPA
-- Location: Bangalore, India (open to remote/flexible)
+- Location: Mumbai, India (open to remote/flexible)
 
 WHY LOOKING FOR NEW ROLE:
 Seeking growth in impact and leadership, want to work on cutting-edge AI-driven products, and opportunities to lead cross-functional teams in a startup/scale-up environment.
@@ -149,20 +151,27 @@ I am driven by curiosity, continuous learning, and solving real-world problems. 
 export const getResumeContent = (): string => {
   return `
 ANKIT BANSAL
-Bangalore, India ◆ +91 8875519489 ◆ ankitbbb162@gmail.com ◆ https://www.linkedin.com/in/ankitbansal2101
+Mumbai, India ◆ +91 8875519489 ◆ ankitbbb162@gmail.com ◆ https://www.linkedin.com/in/ankitbansal2101
 https://ankit-bansal.netlify.app/ | https://github.com/ankitbansal2101
 
 PROFESSIONAL SUMMARY
-Strategic AI Product Manager with 4 years of experience building and scaling B2B SaaS products across aerospace, fintech, and utilities. Proven expertise in driving end-to-end product lifecycles, defining roadmaps, and leading cross-functional collaboration. Skilled in AI productization, automation, and analytics, with hands-on experience building AI-driven MVPs (RAG chatbots, no-code workflow tools, object detection, and automation products). Passionate about leveraging Generative AI, data, and emerging tech to solve business problems and accelerate product growth.
+Strategic AI Product Manager with 4+ years of experience building and scaling B2B SaaS products across proptech, aerospace, fintech, and utilities. Proven expertise in driving end-to-end product lifecycles, client-led discovery, and cross-functional delivery. Skilled in AI productization, RAG chatbots, AI voice agents, cloud telephony & WhatsApp API integrations, with hands-on rapid prototyping that accelerates design validation. Passionate about leveraging Generative AI, data, and emerging tech to solve business problems and accelerate product growth.
 
 SKILLS
 Product Management: Strategy, Roadmapping, Agile/Scrum, Stakeholder Management, Requirements Gathering, User Research, Metrics & KPIs, Experimentation (A/B Testing, Prototyping)
-AI & Technical: Generative AI, RAG Applications, Workflow Automation, Python (Advanced), Machine Learning, API Research, AI-driven Prototyping, LLM Integrations, Computer Vision (Grounding DINO)
+AI & Technical: Generative AI, RAG Applications, AI Voice Agents, Cloud Telephony, WhatsApp API, Workflow Automation, Python (Advanced), LLM Integrations, Computer Vision (Grounding DINO)
 Data & Analytics: SQL, Product Analytics, Excel, Tableau, Clarity
 Collaboration & Tools: Jira, Confluence, Figma, Miro, GitHub, Notion
 
 WORK HISTORY
-● Associate 2 Product Manager | Asteria Aerospace – Bangalore (Remote)| (Jan 2025 – Present)
+● Product Manager | Sirrus.ai – Mumbai | (Nov 2025 – Present)
+- Own Engagement & Martech product roadmap for B2B SaaS CRM platform serving real estate developers; drive strategy across lead management, customer journeys, AI-powered engagement, and workflow automation
+- Conducted 30+ stakeholder interviews with CMOs, Sales Heads, Customer Success teams, and frontline CRM users across 8+ client visits to uncover workflow bottlenecks and influence roadmap prioritization
+- Led configurable CRM architecture rollout, Blueprint Management, Dynamic Lead Layouts, Form Configuration, using AI-generated prototypes (Blueprint Configurator: sirrus3.vercel.app, Details Page Builder: sirrus.vercel.app); reduced customer onboarding by ~90% (3 months to 15 days). GitHub: github.com/ankitbansal2101/sirrus2, github.com/ankitbansal2101/sirrus
+- Defined and launched AI Voice Agent integrated with Exotel; designed conversation flows, prompt engineering, lead qualification logic, and automated follow-up journeys across CRM, telephony, WhatsApp, and marketing workflows
+- Delivered end-to-end integrations with Zoho CRM, PickyAssist WhatsApp, and Servetel Cloud Telephony; coordinated across engineering, implementation, and customer teams for enterprise data sync
+
+● Associate 2 Product Manager | Asteria Aerospace – Bangalore (Remote) | (Jan 2025 – Oct 2025)
 - Defined product strategy and roadmap for drone data workflows, driving a 22% increase in client adoption
 - Built and deployed an AI-powered chatbot using RAG trained on SkyDeck's help documentation, reducing support queries by 40%, accelerating user learning, and decreasing trial churn by 12%
 - Ideated and Launched Automated AI object detection using grounding dino and automated smart summaries using LLM

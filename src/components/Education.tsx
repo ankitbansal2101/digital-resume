@@ -1,38 +1,53 @@
 import React from 'react';
-import { GraduationCap, Calendar } from 'lucide-react';
+import { GraduationCap, Calendar, Award } from 'lucide-react';
+import SectionHeader from './ui/SectionHeader';
+import ScrollReveal from './ui/ScrollReveal';
 
 const Education = () => {
   return (
-    <section id="education" className="scroll-mt-20">
-      <div className="bg-white rounded-lg shadow-sm p-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8">
-          Education
-        </h2>
-        
-        <div className="border-l-4 border-purple-600 pl-6">
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-              <GraduationCap className="text-purple-600" size={24} />
+    <section id="education" className="scroll-mt-24">
+      <SectionHeader
+        eyebrow="Education"
+        title="Education &"
+        highlight="Background"
+        subtitle="Strong analytical foundation with a pivot into product management and technology."
+      />
+
+      <ScrollReveal>
+        <div className="section-card p-6 sm:p-8">
+          <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-brand-100 bg-brand-50">
+              <GraduationCap className="text-brand-600" size={26} />
             </div>
+
             <div className="flex-1">
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-2">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-3">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-slate-900">
                     B.Tech – Civil Engineering
                   </h3>
-                  <h4 className="text-purple-600 font-medium">
+                  <p className="mt-1 text-brand-600 font-medium">
                     Punjab Engineering College, Chandigarh
-                  </h4>
+                  </p>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600 text-sm mt-2 lg:mt-0">
+                <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-600 self-start">
                   <Calendar size={14} />
                   <span>May 2021</span>
                 </div>
               </div>
+
+              <div className="mt-5 flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/80 p-4">
+                <Award size={18} className="text-brand-500 mt-0.5 shrink-0" />
+                <p className="text-sm leading-relaxed text-slate-600">
+                  Engineering background that sharpened analytical thinking, structured
+                  problem-solving, and the ability to break down complex systems, skills
+                  that translate directly into product management.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 };

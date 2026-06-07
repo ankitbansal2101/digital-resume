@@ -17,14 +17,14 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['about', 'experience', 'skills', 'portfolio', 'education', 'contact'];
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const offsetTop = element.offsetTop;
           const height = element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
             setActiveSection(section);
             break;
@@ -33,16 +33,16 @@ function App() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50">
       <Header />
       <Navigation activeSection={activeSection} />
-      
-      <main className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-6 sm:space-y-8">
+
+      <main className="section-container px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-12 sm:space-y-16">
         <About />
         <Experience />
         <Skills />
@@ -50,14 +50,19 @@ function App() {
         <Education />
         <Contact />
       </main>
-      
-      <footer className="bg-gray-900 text-gray-300 py-6 mt-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2025 Ankit Bansal. All rights reserved.</p>
+
+      <footer className="border-t border-slate-200 bg-slate-900 text-slate-400 py-10 mt-4">
+        <div className="section-container px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-center sm:text-left">
+              <p className="font-semibold text-white">Ankit Bansal</p>
+              <p className="text-sm mt-1">Strategic AI Product Manager</p>
+            </div>
+            <p className="text-sm">&copy; 2025 Ankit Bansal. All rights reserved.</p>
+          </div>
         </div>
       </footer>
 
-      {/* Chatbot Components */}
       <ChatButton onClick={() => setIsChatOpen(true)} />
       <Chatbot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
     </div>

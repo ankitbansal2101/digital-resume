@@ -19,13 +19,13 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'tell-about-yourself',
     category: 'Basic Info',
     question: 'Tell me about yourself',
-    answer: "I'm a Strategic AI Product Manager with 4 years of experience building and scaling B2B SaaS products across aerospace, fintech, and utilities. I started as a Business Analyst Intern at Collegedunia, progressed through Associate Product Manager at Smart Energy Water and Associate 2 Product Manager at IPaySmart, and now I'm an Associate 2 Product Manager at Asteria Aerospace leading AI-driven product initiatives. I specialize in AI productization, RAG applications, Computer Vision with Grounding DINO, and have delivered solutions that added $1M+ in revenue."
+    answer: "I'm a Strategic AI Product Manager with 4+ years of experience building and scaling B2B SaaS products across proptech, aerospace, fintech, and utilities. I'm currently a Product Manager at Sirrus.ai in Mumbai, owning the Engagement & Martech roadmap for a CRM platform serving real estate developers. I specialize in AI voice agents, configurable CRM architecture, enterprise integrations, and client-led product strategy, with $4M+ in cumulative ARR impact across roles."
   },
   {
     id: 'location-availability',
     category: 'Basic Info',
     question: 'What is your current location and availability?',
-    answer: "I'm based in Bangalore, India, and I'm immediately available to start. I'm open to remote, hybrid, or on-site work arrangements depending on the role and company needs."
+    answer: "I'm based in Mumbai, India, and I'm immediately available to start. I'm open to remote, hybrid, or on-site work arrangements depending on the role and company needs."
   },
   {
     id: 'notice-period',
@@ -39,13 +39,13 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'years-experience',
     category: 'Experience',
     question: 'How many years of experience do you have?',
-    answer: "I have 4 years of product management experience, starting as a Business Analyst Intern at Collegedunia and progressing through roles at Smart Energy Water, IPaySmart, and currently Asteria Aerospace. I've consistently grown in responsibility and impact across different industries."
+    answer: "I have 4+ years of product management experience across proptech, aerospace, fintech, and utilities, from Business Analyst Intern at Collegedunia to my current role as Product Manager at Sirrus.ai. I've consistently grown in responsibility, client-facing discovery, and measurable product impact."
   },
   {
     id: 'current-role',
     category: 'Experience',
-    question: 'Tell me about your current role at Asteria Aerospace',
-    answer: "At Asteria Aerospace, I'm the Associate 2 Product Manager leading drone data workflow strategy with a 22% increase in client adoption. I've built an AI-powered RAG chatbot that reduced support queries by 40% and decreased trial churn by 12%. I also ideated and launched automated AI object detection using Grounding DINO and automated smart summaries using LLM, plus drove 95% on-time delivery through effective sprint planning and user feedback loops."
+    question: 'Tell me about your current role at Sirrus.ai',
+    answer: "At Sirrus.ai, I own the Engagement & Martech product roadmap for a B2B SaaS CRM platform serving real estate developers, driving strategy across lead management, customer journeys, AI-powered engagement, and workflow automation. I've conducted 30+ stakeholder interviews and worked directly with CMOs, Sales Heads, Customer Success teams, and frontline CRM users across 8+ client visits. I led a configurable CRM architecture rollout (Blueprint Management, Dynamic Lead Layouts, Form Configuration) that reduced onboarding from 3 months to 15 days (~90% reduction) using AI-generated prototypes. I also launched an AI Voice Agent integrated with Exotel and delivered end-to-end integrations with Zoho CRM, PickyAssist WhatsApp, and Servetel Cloud Telephony."
   },
   {
     id: 'biggest-achievement',
@@ -57,7 +57,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'career-progression',
     category: 'Experience',
     question: 'Walk me through your career progression',
-    answer: "I started as a Business Analyst Intern at Collegedunia, where I automated data workflows using Python and SQL. I then became an Associate Product Manager at Smart Energy Water, launching 5+ payment features that drove 25% client adoption uplift and expanded ARR by $3M. At IPaySmart, I was promoted to Associate 2 Product Manager, delivering AI-driven revenue recovery solutions that added $1M to revenue. Now at Asteria Aerospace, I'm an Associate 2 Product Manager leading AI-driven product initiatives including RAG chatbots and computer vision with Grounding DINO."
+    answer: "I started as a Business Analyst Intern at Collegedunia, automating data workflows with Python and SQL. I became Associate Product Manager at Smart Energy Water, launching 5+ payment features that drove 25% client adoption uplift and expanded ARR by $3M. At IPaySmart, I was promoted to Associate 2 Product Manager, delivering AI-driven revenue recovery that added $1M to revenue. At Asteria Aerospace, I led AI initiatives including a RAG chatbot that reduced support queries by 40%. Now at Sirrus.ai, I own Engagement & Martech for a real estate CRM platform, conducting 30+ stakeholder interviews across 8+ client visits, launching configurable CRM architecture that cut onboarding by ~90%, and delivering an AI Voice Agent with Exotel plus Zoho, PickyAssist, and Servetel integrations."
   },
 
   // Skills & Technical
@@ -71,7 +71,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'ai-experience',
     category: 'Skills',
     question: 'Do you have experience with AI and machine learning?',
-    answer: "Yes, I'm deeply passionate about AI and have built several AI-driven solutions. I've developed RAG chatbots using OpenAI APIs, implemented Computer Vision with Grounding DINO for automated object detection, created automated smart summaries using LLM, and built rapid AI prototypes for product validation. I actively experiment with Generative AI, LLM integrations, and emerging AI tools to accelerate development cycles."
+    answer: "Yes, I'm deeply passionate about AI and have built several AI-driven solutions. At Sirrus.ai, I launched an AI Voice Agent integrated with Exotel, designing conversation flows, prompt engineering, and lead qualification logic, and used AI-generated prototypes to accelerate CRM architecture alignment. At Asteria, I built RAG chatbots and computer vision with Grounding DINO. I focus on validating AI solutions with enterprise stakeholders before building and measuring impact through clear KPIs."
   },
   {
     id: 'pm-approach',
@@ -130,7 +130,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'industry-trends',
     category: 'Culture Fit',
     question: 'How do you stay updated with industry trends?',
-    answer: "I stay updated through AI and product management newsletters, industry blogs, and hands-on experimentation with new tools and technologies. I actively participate in product management communities, attend virtual conferences, and most importantly, I build side projects to test emerging technologies like AI APIs and no-code platforms."
+    answer: "I stay updated through AI and product management newsletters, industry blogs, and hands-on experimentation with new tools and technologies. I actively participate in product management communities, attend virtual conferences, and most importantly, I build side hustles like PMRanker and The Coding Live to test ideas and stay sharp outside my full-time role."
   },
   {
     id: 'work-environment',
@@ -145,6 +145,18 @@ const predefinedQuestions: PredefinedQuestion[] = [
     category: 'Projects',
     question: 'Tell me about the Drone Log Analysis project',
     answer: "I built a telemetry anomaly detection system that processes drone flight data to identify maintenance patterns and operational insights. The project involved working with aerospace engineers to understand complex data structures, building analytics pipelines, and creating dashboards for actionable insights. It replaced reliance on third-party tools and helped drive new customer acquisition by providing better value to clients."
+  },
+  {
+    id: 'sirrus-prototypes',
+    category: 'Projects',
+    question: 'Show me your Sirrus.ai prototypes',
+    answer: "I built interactive prototypes to validate configurable CRM architecture with stakeholders before development. The Blueprint Configurator prototype (sirrus3.vercel.app/developer/lead-settings/blueprint-configurator) demonstrates Blueprint Management for CRM workflows. The Details Page Builder prototype (sirrus.vercel.app/settings/details-page-builder) shows Dynamic Lead Layouts and Form Configuration for module details pages. Source code is on GitHub at github.com/ankitbansal2101/sirrus2 and github.com/ankitbansal2101/sirrus."
+  },
+  {
+    id: 'sirrus-voice-agent',
+    category: 'Projects',
+    question: 'Tell me about the AI voice calling agent at Sirrus.ai',
+    answer: "At Sirrus.ai, I defined and launched an AI Voice Agent integrated with Exotel, designing conversation flows, prompt engineering strategies, lead qualification logic, and automated follow-up journeys across CRM, telephony, WhatsApp, and marketing workflows. I also delivered end-to-end integrations with Zoho CRM, PickyAssist WhatsApp, and Servetel Cloud Telephony, coordinating across engineering, implementation, and customer teams to support enterprise-specific business processes and data sync requirements."
   },
   {
     id: 'ai-chatbot',

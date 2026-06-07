@@ -1,18 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Briefcase, TrendingUp, Users, Target, Zap, Award } from 'lucide-react';
+import { Calendar, MapPin, Briefcase, TrendingUp, Users, Target, Zap, Award, Building2 } from 'lucide-react';
+import SectionHeader from './ui/SectionHeader';
 
 const Experience = () => {
   const experiences = [
+    {
+      id: 'sirrus-ai',
+      title: 'Product Manager@Sirrus.ai',
+      company: 'Sirrus.ai',
+      location: 'Mumbai',
+      period: 'Nov 2025 – Present',
+      gradient: 'from-brand-600 to-brand-800',
+      icon: <Building2 className="text-white" size={24} />,
+      status: 'Current',
+      achievements: [
+        'Own the Engagement & Martech product roadmap for a B2B SaaS CRM platform serving real estate developers, driving product strategy across lead management, customer journeys, AI-powered engagement, and workflow automation used by multiple enterprise customers',
+        'Conducted 30+ stakeholder interviews and worked directly with CMOs, Sales Heads, Customer Success teams, and frontline CRM users across 8+ client visits to uncover workflow bottlenecks, influencing roadmap prioritization and product direction',
+        'Led the vision and rollout of a configurable CRM architecture, including Blueprint Management, Dynamic Lead Layouts, and Form Configuration, using AI-generated prototypes (Blueprint Configurator & Details Page Builder) to accelerate stakeholder alignment, reducing customer onboarding timelines by ~90% (3 months to 15 days)',
+        'Defined and launched an AI Voice Agent solution integrated with Exotel, designing conversation flows, prompt engineering strategies, lead qualification logic, and automated follow-up journeys across CRM, telephony, WhatsApp, and marketing workflows',
+        'Delivered end-to-end integrations with Zoho CRM, PickyAssist WhatsApp, and Servetel Cloud Telephony, coordinating across engineering, implementation, and customer teams to support enterprise-specific business processes and data synchronization requirements'
+      ],
+      keyMetrics: [
+        { label: 'Onboarding Time', value: '-90%', icon: <TrendingUp className="text-green-600" size={16} /> },
+        { label: 'Stakeholder Interviews', value: '30+', icon: <Users className="text-blue-600" size={16} /> },
+        { label: 'Enterprise Integrations', value: '3', icon: <Zap className="text-purple-600" size={16} /> }
+      ],
+      tags: ['B2B SaaS', 'PropTech', 'Martech', 'AI Voice Agent', 'CRM Architecture', 'Enterprise Integrations']
+    },
     {
       id: 'asteria-aerospace',
       title: 'Product@Asteria Aerospace',
       company: 'Asteria Aerospace',
       location: 'Bangalore - Remote',
-      period: 'Jan 2025 – Present',
-      gradient: 'from-blue-500 to-blue-600',
+      period: 'Jan 2025 – Oct 2025',
+      gradient: 'from-brand-600 to-brand-800',
       icon: <Briefcase className="text-white" size={24} />,
-      status: 'Current',
+      status: 'Previous',
       achievements: [
         'Defined product strategy and roadmap for drone data workflows, driving a 22% increase in client adoption',
         'Built and deployed an AI-powered chatbot using RAG trained on SkyDeck\'s help documentation, reducing support queries by 40% and decreasing trial churn by 12%',
@@ -33,7 +57,7 @@ const Experience = () => {
       company: 'IpaySmart (Smart Energy Water)',
       location: 'Noida',
       period: 'Jan 2023 – Dec 2024',
-      gradient: 'from-blue-500 to-blue-600',
+      gradient: 'from-brand-600 to-brand-800',
       icon: <Target className="text-white" size={24} />,
       status: 'Previous',
       achievements: [
@@ -56,7 +80,7 @@ const Experience = () => {
       company: 'Smart Energy Water',
       location: 'Noida',
       period: 'Jul 2021 – Jan 2023',
-      gradient: 'from-blue-500 to-blue-600',
+      gradient: 'from-brand-600 to-brand-800',
       icon: <Award className="text-white" size={24} />,
       status: 'Previous',
       achievements: [
@@ -79,7 +103,7 @@ const Experience = () => {
       company: 'Collegedunia',
       location: 'Gurgaon',
       period: 'Jan 2020 – Jun 2020',
-      gradient: 'from-blue-500 to-blue-600',
+      gradient: 'from-brand-600 to-brand-800',
       icon: <Briefcase className="text-white" size={24} />,
       status: 'Internship',
       achievements: [
@@ -141,42 +165,29 @@ const Experience = () => {
   return (
     <motion.section 
       id="experience" 
-      className="scroll-mt-20 py-6 sm:py-8"
+      className="scroll-mt-24"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-full mx-auto px-2 sm:px-4 lg:px-6">
-        {/* Header */}
-        <motion.div 
-          className="text-center mb-8 sm:mb-10"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            Work
-            <span className="ml-2 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              Experience
-            </span>
-          </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            4+ years of product management experience across aerospace, fintech, and utilities, driving innovation and measurable business impact.
-          </p>
-        </motion.div>
+      <SectionHeader
+        eyebrow="Experience"
+        title="Work"
+        highlight="Experience"
+        subtitle="4+ years of product management across proptech, aerospace, fintech, and utilities, driving innovation and measurable business impact."
+      />
 
+      <div className="max-w-full mx-auto">
         {/* Career Timeline Visualization */}
         <motion.div 
-          className="mb-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 sm:p-8 border border-blue-100"
+          className="mb-8 section-card p-6 sm:p-8 bg-gradient-to-br from-brand-50/50 to-slate-50"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">
-            Career
-            <span className="ml-2 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              Journey
-            </span>
+          <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-6 text-center">
+            Career <span className="gradient-text">Journey</span>
           </h3>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
@@ -197,7 +208,7 @@ const Experience = () => {
                 
                 {index < experiences.length - 1 && (
                   <motion.div
-                    className="hidden sm:block w-6 h-0.5 bg-gradient-to-r from-blue-300 to-cyan-300"
+                    className="hidden sm:block w-6 h-0.5 bg-gradient-to-r from-brand-300 to-brand-400"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 0.7 + index * 0.2, duration: 0.5 }}
@@ -223,7 +234,7 @@ const Experience = () => {
               whileHover="hover"
             >
               <motion.div
-                className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden relative h-full flex flex-col"
+                className="section-card overflow-hidden relative h-full flex flex-col transition-shadow duration-300 hover:shadow-card-hover"
                 variants={hoverVariants}
               >
 
@@ -273,7 +284,7 @@ const Experience = () => {
                       {exp.keyMetrics.map((metric, idx) => (
                         <motion.div 
                           key={idx} 
-                          className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-3 text-center border border-blue-100"
+                          className="metric-card"
                           whileHover={{ scale: 1.05 }}
                         >
                           <div className="flex items-center justify-center mb-1">
@@ -293,12 +304,12 @@ const Experience = () => {
                       {exp.achievements.slice(0, 4).map((achievement, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-gray-700">
                           <motion.div 
-                            className="bg-blue-100 rounded-full p-0.5 mt-1 flex-shrink-0"
+                            className="bg-brand-100 rounded-full p-0.5 mt-1 flex-shrink-0"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.5 + idx * 0.1 }}
                           >
-                            <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                            <div className="w-1.5 h-1.5 bg-brand-600 rounded-full"></div>
                           </motion.div>
                           <span className="text-xs sm:text-sm leading-relaxed">{achievement}</span>
                         </li>
@@ -311,7 +322,7 @@ const Experience = () => {
                     {exp.tags.map((tag, idx) => (
                       <motion.span
                         key={idx}
-                        className="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100"
+                        className="tag text-xs px-2 py-1"
                         whileHover={{ scale: 1.05 }}
                       >
                         {tag}
@@ -322,7 +333,7 @@ const Experience = () => {
 
                 {/* Hover Overlay */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-t from-brand-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                 />
