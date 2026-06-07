@@ -409,7 +409,7 @@ const CaseStudies: React.FC = () => {
                 <ExternalLink size={16} />
               </motion.a>
               <motion.a
-                href="/Ankit_Bansal_PM.pdf"
+                href="/Ankit_Bansal_PM_2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-sm sm:text-base"
