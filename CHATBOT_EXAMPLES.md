@@ -8,7 +8,7 @@ This document shows the types of questions Ankit's AI assistant can answer intel
 - "What is Ankit's location and contact information?"
 - "How can I reach Ankit for an interview?"
 - "What is Ankit's notice period?"
-- "What are Ankit's salary expectations?"
+- "What hike is Ankit looking for?"
 
 ### Professional Summary
 - "Tell me about Ankit Bansal"

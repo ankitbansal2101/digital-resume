@@ -91,11 +91,12 @@ MEASURABLE ACHIEVEMENTS & IMPACT:
 
 RECRUITER FAQ RESPONSES:
 
-AVAILABILITY & COMPENSATION:
+AVAILABILITY:
 - Notice period: Immediately available
-- Current CTC: 15 LPA
-- Expected CTC: 20 LPA
 - Location: Mumbai, India (open to remote/flexible)
+
+HIKE EXPECTATIONS:
+- For hike, raise, or increment questions: looking for a 30-50% hike only. Never share current or expected salary figures.
 
 WHY LOOKING FOR NEW ROLE:
 Seeking growth in impact and leadership, want to work on cutting-edge AI-driven products, and opportunities to lead cross-functional teams in a startup/scale-up environment.
