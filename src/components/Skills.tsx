@@ -12,7 +12,7 @@ const skillCategories = [
   {
     title: 'Product Management',
     icon: Target,
-    color: 'text-brand-600 bg-brand-50 border-brand-100',
+    color: 'text-term-accent border-term-border bg-term-elevated',
     skills: [
       'Strategy & Roadmapping',
       'Agile/Scrum',
@@ -28,7 +28,7 @@ const skillCategories = [
   {
     title: 'AI & Technical',
     icon: Brain,
-    color: 'text-brand-700 bg-brand-100/80 border-brand-200',
+    color: 'text-term-accent border-term-border bg-term-elevated',
     skills: [
       'Generative AI',
       'RAG Applications',
@@ -44,7 +44,7 @@ const skillCategories = [
   {
     title: 'Data & Analytics',
     icon: BarChart3,
-    color: 'text-brand-800 bg-cream-200/60 border-brand-200',
+    color: 'text-term-accent border-term-border bg-term-elevated',
     skills: [
       'SQL',
       'Product Analytics',
@@ -59,7 +59,7 @@ const skillCategories = [
   {
     title: 'Collaboration & Tools',
     icon: Users,
-    color: 'text-brand-600 bg-cream-100 border-brand-200',
+    color: 'text-term-accent border-term-border bg-term-elevated',
     skills: [
       'Jira',
       'Confluence',
@@ -113,19 +113,19 @@ const Skills = () => {
             <motion.div
               key={category.title}
               variants={cardVariants}
-              className="section-card p-6 sm:p-7 transition-shadow duration-300 hover:shadow-card-hover group"
+              className="section-card p-6 sm:p-7 transition-shadow duration-300 group"
             >
               <div className="flex items-center gap-3 mb-5">
-                <div className={`rounded-xl border p-2.5 ${category.color}`}>
+                <div className={`border p-2.5 ${category.color}`}>
                   <Icon size={20} />
                 </div>
-                <h3 className="text-lg font-semibold text-brand-950">{category.title}</h3>
+                <h3 className="text-lg font-semibold text-term-text">{category.title}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="tag transition-colors duration-200 group-hover:border-brand-200"
+                    className="tag transition-colors duration-200 group-hover:border-term-border"
                   >
                     {skill}
                   </span>

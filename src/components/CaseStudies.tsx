@@ -260,15 +260,15 @@ const CaseStudies: React.FC = () => {
               whileHover="hover"
             >
               <motion.div
-                className="h-full bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden relative"
+                className="h-full bg-term-surface rounded-2xl border border-gray-100 overflow-hidden relative"
                 variants={hoverVariants}
               >
                 {/* Gradient Header */}
                 <div className={`bg-gradient-to-br ${study.gradient} p-6 sm:p-8 text-white relative overflow-hidden`}>
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white transform translate-x-16 -translate-y-16"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-white transform -translate-x-12 translate-y-12"></div>
+                    <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-term-surface transform translate-x-16 -translate-y-16"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-term-surface transform -translate-x-12 translate-y-12"></div>
                   </div>
                   
                   <div className="relative z-10">
@@ -291,7 +291,7 @@ const CaseStudies: React.FC = () => {
                         {study.aiTools.map((tool, idx) => (
                           <motion.div
                             key={idx}
-                            className="bg-white/20 backdrop-blur-sm rounded-lg p-2"
+                            className="bg-term-surface/20 backdrop-blur-sm rounded-lg p-2"
                             whileHover={{ scale: 1.1, rotate: 5 }}
                             title={tool.name}
                           >
@@ -387,8 +387,8 @@ const CaseStudies: React.FC = () => {
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white transform translate-x-16 -translate-y-16"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-white transform -translate-x-12 translate-y-12"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-term-surface transform translate-x-16 -translate-y-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-term-surface transform -translate-x-12 translate-y-12"></div>
           </div>
           
           <div className="relative z-10">
@@ -401,7 +401,7 @@ const CaseStudies: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <motion.a
                 href="mailto:ankitbbb162@gmail.com"
-                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 bg-term-surface text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -412,7 +412,7 @@ const CaseStudies: React.FC = () => {
                 href="/Ankit_Bansal_PM_2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-6 py-3 rounded-lg hover:bg-term-surface hover:text-blue-600 transition-colors font-semibold text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

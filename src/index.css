@@ -10,66 +10,195 @@
   }
 
   body {
-    @apply bg-cream-100 text-stone-800 font-sans;
-    background-image:
-      radial-gradient(ellipse 120% 80% at 50% -30%, rgb(240 232 220 / 0.6), transparent),
-      radial-gradient(ellipse 60% 40% at 100% 50%, rgb(245 239 230 / 0.5), transparent);
+    @apply bg-term-bg text-term-text font-mono text-base leading-relaxed;
   }
 
   ::selection {
-    @apply bg-brand-200 text-brand-950;
+    @apply bg-term-selection text-term-prompt;
+  }
+
+  a {
+    @apply text-term-accent transition-colors hover:text-term-accent-dim;
   }
 }
 
 @layer components {
   .section-container {
-    @apply max-w-6xl mx-auto w-full;
+    @apply max-w-3xl mx-auto w-full;
   }
 
   .section-card {
-    @apply bg-cream-50/90 rounded-2xl border border-brand-200/50 shadow-luxury backdrop-blur-sm;
+    @apply border border-term-border bg-term-surface;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-brand-800 via-brand-600 to-brand-500 bg-clip-text text-transparent;
+    @apply text-term-accent;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-semibold text-cream-50 shadow-sm transition-all duration-200 hover:bg-brand-800 hover:shadow-card-hover hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 border border-term-accent bg-transparent px-4 py-2 text-base text-term-accent transition-colors duration-150 hover:bg-term-accent hover:text-term-bg active:opacity-90;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-cream-50 px-5 py-2.5 text-sm font-semibold text-brand-800 shadow-sm transition-all duration-200 hover:border-brand-300 hover:bg-brand-50 hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 border border-term-border bg-transparent px-4 py-2 text-base text-term-text transition-colors duration-150 hover:border-term-accent hover:text-term-accent active:opacity-90;
   }
 
   .tag {
-    @apply inline-flex items-center rounded-full border border-brand-200/80 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-800;
+    @apply inline-flex items-center border border-term-border bg-term-elevated px-2 py-0.5 text-sm text-term-muted;
   }
 
   .metric-card {
-    @apply rounded-xl border border-brand-100/80 bg-cream-100/80 p-3 text-center transition-colors duration-200 hover:border-brand-200 hover:bg-brand-50/60;
+    @apply border border-term-border bg-term-bg p-3 text-center transition-colors duration-150 hover:border-term-accent;
   }
 
-  .luxury-divider {
-    @apply h-px w-full bg-gradient-to-r from-transparent via-brand-300/60 to-transparent;
+  .terminal-divider {
+    @apply h-px w-full bg-term-border;
+  }
+
+  .terminal-prompt {
+    @apply text-term-prompt;
+  }
+
+  .nav-link {
+    @apply text-term-muted transition-colors hover:text-term-accent;
+  }
+
+  .nav-link-active {
+    @apply text-term-accent;
+  }
+
+  .prose-terminal h1 {
+    @apply text-term-accent text-3xl sm:text-4xl font-semibold mb-8;
+  }
+
+  .prose-terminal h2 {
+    @apply text-term-text text-xl sm:text-2xl font-semibold mt-8 mb-3;
+  }
+
+  .prose-terminal h3 {
+    @apply text-term-text text-lg font-semibold mt-5 mb-2;
+  }
+
+  .prose-terminal p {
+    @apply text-term-muted leading-relaxed;
+  }
+
+  .prose-terminal ul {
+    @apply list-disc pl-5 space-y-2 text-term-muted mb-4;
+  }
+
+  .prose-terminal li {
+    @apply leading-relaxed;
+  }
+
+  .career-entry {
+    @apply pb-10 mb-10 border-b border-term-border last:border-b-0 last:mb-0 last:pb-0;
+  }
+
+  .role-meta {
+    @apply text-term-accent text-base mb-1;
+  }
+
+  .role-company {
+    @apply text-term-text text-lg sm:text-2xl font-semibold mb-1;
+  }
+
+  .role-location {
+    @apply text-term-dim text-base mb-4;
+  }
+
+  .project-list {
+    @apply list-disc pl-5 space-y-4 text-term-muted mb-10;
+  }
+
+  .project-list strong,
+  .project-list a,
+  .project-name-link {
+    @apply text-term-accent;
+  }
+
+  .project-links a {
+    @apply text-term-accent underline-offset-2 hover:underline;
+  }
+
+  .career-detail-link {
+    @apply text-term-accent hover:text-term-accent-dim no-underline;
+  }
+
+  .projects-group-heading {
+    @apply text-term-text text-xl sm:text-2xl font-semibold mb-0;
+  }
+
+  .projects-group {
+    @apply mb-14 last:mb-0;
+  }
+
+  .projects-group-header {
+    @apply mb-6 pb-4 border-b border-term-border;
+  }
+
+  .projects-group-path {
+    @apply text-term-dim text-sm mb-2 font-mono;
+  }
+
+  .projects-group--company {
+    @apply border-l-2 border-term-accent pl-4 sm:pl-5;
+  }
+
+  .projects-group--company .projects-group-heading {
+    @apply text-term-accent;
+  }
+
+  .projects-group--company .projects-group-path {
+    @apply text-term-accent/70;
+  }
+
+  .projects-group--side-hustle {
+    @apply border-l-2 border-term-prompt pl-4 sm:pl-5;
+  }
+
+  .projects-group--side-hustle .projects-group-heading {
+    @apply text-term-prompt;
+  }
+
+  .projects-group--side-hustle .projects-group-path {
+    @apply text-term-prompt/70;
+  }
+
+  .project-entry--company {
+    @apply ml-0;
+  }
+
+  .project-entry--side-hustle .role-meta {
+    @apply text-term-prompt;
+  }
+
+  .project-category {
+    @apply inline-block border px-2 py-0.5 text-xs uppercase tracking-widest mb-3;
+  }
+
+  .project-category--company {
+    @apply text-term-accent border-term-accent/40 bg-term-accent/10;
+  }
+
+  .project-category--side-hustle {
+    @apply text-term-prompt border-term-prompt/40 bg-term-prompt/10;
+  }
+
+  .detail-section-block + .detail-section-block {
+    @apply mt-4;
+  }
+
+  .terminal-block {
+    @apply mb-8;
+  }
+
+  .terminal-output {
+    @apply mt-2 pl-0 text-term-muted;
   }
 }
 
 @layer utilities {
-  .hero-grid {
-    background-image:
-      linear-gradient(to right, rgb(139 115 85 / 0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(139 115 85 / 0.06) 1px, transparent 1px);
-    background-size: 48px 48px;
-  }
-
-  .mesh-gradient {
-    background:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgb(176 155 110 / 0.18), transparent),
-      radial-gradient(ellipse 60% 40% at 100% 0%, rgb(205 184 150 / 0.14), transparent),
-      radial-gradient(ellipse 50% 30% at 0% 100%, rgb(184 155 110 / 0.1), transparent);
-  }
-
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;

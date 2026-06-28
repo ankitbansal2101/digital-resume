@@ -19,7 +19,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'tell-about-yourself',
     category: 'Basic Info',
     question: 'Tell me about yourself',
-    answer: "I'm a Strategic AI Product Manager with 4+ years of experience building and scaling B2B SaaS products across proptech, aerospace, fintech, and utilities. I'm currently a Product Manager at Sirrus.ai in Mumbai, owning the Engagement & Martech roadmap for a CRM platform serving real estate developers. I specialize in AI voice agents, configurable CRM architecture, enterprise integrations, and client-led product strategy, with $4M+ in cumulative ARR impact across roles."
+    answer: "I'm a Strategic AI Product Manager with 5+ years of experience building and scaling B2B SaaS products across proptech, aerospace, fintech, and utilities. I'm currently a Product Manager at Sirrus.ai in Mumbai, owning the Engagement & Martech roadmap for a CRM platform serving real estate developers. I specialize in AI voice agents, configurable CRM architecture, enterprise integrations, and client-led product strategy, with $4M+ in cumulative ARR impact across roles."
   },
   {
     id: 'location-availability',
@@ -39,7 +39,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'years-experience',
     category: 'Experience',
     question: 'How many years of experience do you have?',
-    answer: "I have 4+ years of product management experience across proptech, aerospace, fintech, and utilities, from Business Analyst Intern at Collegedunia to my current role as Product Manager at Sirrus.ai. I've consistently grown in responsibility, client-facing discovery, and measurable product impact."
+    answer: "I have 5+ years of product management experience across proptech, aerospace, fintech, and utilities, from Business Analyst Intern at Collegedunia to my current role as Product Manager at Sirrus.ai. I've consistently grown in responsibility, client-facing discovery, and measurable product impact."
   },
   {
     id: 'current-role',
@@ -65,7 +65,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'technical-skills',
     category: 'Skills',
     question: 'What are your core technical skills?',
-    answer: "My core technical skills span AI & Technical: Generative AI, RAG Applications, Python (Advanced), LLM Integrations, Computer Vision with Grounding DINO, and Workflow Automation. For Product Management: Strategy & Roadmapping, Agile/Scrum, User Research, A/B Testing, and Cross-functional Leadership. Data & Analytics: SQL, Tableau, Clarity, and Business Intelligence. Collaboration Tools: Jira, Confluence, Figma, Miro, GitHub, and Notion."
+    answer: "My core technical skills span AI & Technical: Generative AI, RAG Applications, Python (Advanced), LLM Integrations, Computer Vision with Grounding DINO, and Workflow Automation. AI Tools & Platforms: Cursor, Claude Code, and ElevenLabs. For Product Management: Strategy & Roadmapping, Agile/Scrum, User Research, A/B Testing, and Cross-functional Leadership. Data & Analytics: SQL, Tableau, Clarity, and Business Intelligence. Collaboration Tools: Jira, Confluence, Figma, Miro, GitHub, and Notion."
   },
   {
     id: 'ai-experience',
@@ -83,7 +83,7 @@ const predefinedQuestions: PredefinedQuestion[] = [
     id: 'pm-tools',
     category: 'Skills',
     question: 'What tools do you use for product management?',
-    answer: "I use Jira for backlog management and sprint planning, Confluence for documentation, Figma for design collaboration, and Miro for workshops and roadmapping. For analytics, I work with SQL databases, Excel, Tableau, and Clarity. I also use GitHub for technical collaboration and Notion for knowledge management. For AI development, I work with Python, LLM APIs, and various AI research tools."
+    answer: "I use Jira for backlog management and sprint planning, Confluence for documentation, Figma for design collaboration, and Miro for workshops and roadmapping. For analytics, I work with SQL databases, Excel, Tableau, and Clarity. I also use GitHub for technical collaboration and Notion for knowledge management. For AI development and prototyping, I work with Cursor, Claude Code, ElevenLabs, Python, and LLM APIs."
   },
 
   // Behavioral Questions
@@ -178,24 +178,24 @@ const PredefinedQuestions: React.FC<PredefinedQuestionsProps> = ({ onQuestionSel
   const categories = Array.from(new Set(predefinedQuestions.map(q => q.category)));
 
   return (
-    <div className="mb-3 sm:mb-4 p-2.5 sm:p-4 bg-cream-100/80 rounded-lg border border-brand-100">
+    <div className="mb-3 sm:mb-4 p-2.5 sm:p-4 border border-term-border bg-term-bg">
       <div className="flex items-center gap-2 mb-2 sm:mb-3">
-        <MessageSquare size={12} className="sm:w-[14px] sm:h-[14px] text-brand-600" />
-        <h3 className="text-xs sm:text-sm font-medium text-brand-900">Quick Questions</h3>
+        <MessageSquare size={14} className="text-term-accent" />
+        <h3 className="text-sm sm:text-base text-term-accent">quick questions</h3>
       </div>
       
       <div className="space-y-2 sm:space-y-3">
         {categories.map(category => (
           <div key={category}>
-            <h4 className="text-xs font-medium text-stone-500 mb-1.5 sm:mb-2">{category}</h4>
-            <div className="flex flex-wrap gap-1 sm:gap-2">
+            <h4 className="text-sm text-term-dim mb-1.5 sm:mb-2">// {category.toLowerCase()}</h4>
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {predefinedQuestions
                 .filter(q => q.category === category)
                 .map(question => (
                   <button
                     key={question.id}
                     onClick={() => onQuestionSelect(question.question, question.answer)}
-                    className="text-xs bg-cream-50 border border-brand-200/60 text-brand-800 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full hover:bg-brand-50 hover:border-brand-300 hover:text-brand-900 transition-colors leading-tight"
+                    className="text-sm border border-term-border bg-term-surface text-term-muted px-2.5 sm:px-3 py-1.5 sm:py-2 hover:border-term-accent hover:text-term-accent transition-colors leading-snug text-left"
                   >
                     {question.question}
                   </button>

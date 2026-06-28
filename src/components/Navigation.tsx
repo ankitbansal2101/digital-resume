@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { User, Briefcase, Code, FolderOpen, GraduationCap, MessageCircle } from 'lucide-react';
 
 interface NavigationProps {
   activeSection: string;
@@ -16,12 +14,12 @@ const Navigation = ({ activeSection }: NavigationProps) => {
   }, []);
 
   const navItems = [
-    { id: 'about', label: 'About', icon: User },
-    { id: 'experience', label: 'Experience', icon: Briefcase },
-    { id: 'skills', label: 'Skills', icon: Code },
-    { id: 'portfolio', label: 'Portfolio', icon: FolderOpen },
-    { id: 'education', label: 'Education', icon: GraduationCap },
-    { id: 'contact', label: 'Contact', icon: MessageCircle },
+    { id: 'about', label: 'about' },
+    { id: 'experience', label: 'experience' },
+    { id: 'skills', label: 'skills' },
+    { id: 'portfolio', label: 'portfolio' },
+    { id: 'education', label: 'education' },
+    { id: 'contact', label: 'contact' },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -30,38 +28,24 @@ const Navigation = ({ activeSection }: NavigationProps) => {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'border-b border-brand-200/60 bg-cream-50/90 shadow-sm backdrop-blur-xl'
-          : 'border-b border-brand-100/50 bg-cream-100/80 backdrop-blur-md'
+      className={`sticky top-0 z-50 border-b border-term-border transition-colors duration-200 ${
+        scrolled ? 'bg-term-bg/95 backdrop-blur-sm' : 'bg-term-bg'
       }`}
     >
-      <div className="section-container px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center overflow-x-auto py-3 scrollbar-hide">
-          <div className="relative flex gap-1 rounded-xl border border-brand-200/60 bg-cream-200/50 p-1 shadow-sm">
-            {navItems.map(({ id, label, icon: Icon }) => {
-              const isActive = activeSection === id;
-              return (
-                <button
-                  key={id}
-                  onClick={() => scrollToSection(id)}
-                  className={`relative flex items-center gap-2 rounded-lg px-3 sm:px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-                    isActive ? 'text-cream-50' : 'text-stone-600 hover:text-brand-700'
-                  }`}
-                >
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-pill"
-                      className="absolute inset-0 rounded-lg bg-brand-700 shadow-sm"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                  <Icon size={15} className="relative z-10 shrink-0" />
-                  <span className="relative z-10 hidden sm:inline whitespace-nowrap">{label}</span>
-                </button>
-              );
-            })}
-          </div>
+      <div className="section-container px-4 sm:px-6 py-3">
+        <div className="flex flex-wrap items-center gap-x-1 gap-y-2 text-sm">
+          <span className="text-term-prompt mr-2">menu ▾</span>
+          {navItems.map((item, index) => (
+            <React.Fragment key={item.id}>
+              {index > 0 && <span className="text-term-border select-none">|</span>}
+              <button
+                onClick={() => scrollToSection(item.id)}
+                className={activeSection === item.id ? 'nav-link-active' : 'nav-link'}
+              >
+                {item.label}
+              </button>
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </nav>

@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Briefcase, Rocket } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProjectCard, { ProjectCardItem } from './ProjectCard';
 
 interface PortfolioCarouselProps {
@@ -19,7 +18,6 @@ const PortfolioCarousel: React.FC<PortfolioCarouselProps> = ({
   autoPlayMs = 8000,
 }) => {
   const [index, setIndex] = useState(0);
-  const Icon = variant === 'company' ? Briefcase : Rocket;
   const itemLabel = variant === 'company' ? 'project' : 'hustle';
 
   const goTo = useCallback(
@@ -46,84 +44,54 @@ const PortfolioCarousel: React.FC<PortfolioCarouselProps> = ({
 
   return (
     <div className="section-card overflow-hidden">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-brand-100 px-5 sm:px-6 py-4 bg-cream-100/80">
-        <div className="flex items-center gap-3">
-          <div className="rounded-xl border border-brand-100 bg-brand-50 p-2.5 text-brand-600">
-            <Icon size={18} />
-          </div>
-          <div>
-            <h3 className="text-lg sm:text-xl font-bold text-brand-950">
-              {title} <span className="gradient-text">{highlight}</span>
-            </h3>
-            <p className="text-xs text-stone-500 mt-0.5">
-              {items.length} {items.length === 1 ? itemLabel : `${itemLabel}s`}
-            </p>
-          </div>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-term-border px-5 sm:px-6 py-4">
+        <div>
+          <h3 className="text-term-accent text-base sm:text-lg font-semibold">
+            {title} {highlight}
+          </h3>
+          <p className="text-xs text-term-dim mt-0.5">
+            {items.length} {items.length === 1 ? itemLabel : `${itemLabel}s`}
+          </p>
         </div>
 
         <div className="flex items-center gap-2 self-end sm:self-auto">
-          <span className="text-xs font-medium text-stone-500 tabular-nums mr-1">
+          <span className="text-xs text-term-dim tabular-nums mr-1">
             {index + 1} / {items.length}
           </span>
           <button
             onClick={prev}
-            className="rounded-xl border border-brand-200 bg-white p-2 text-stone-600 transition-colors hover:border-brand-200 hover:text-brand-600"
+            className="btn-secondary px-2 py-1.5"
             aria-label="Previous project"
           >
-            <ChevronLeft size={18} />
+            <ChevronLeft size={16} />
           </button>
           <button
             onClick={next}
-            className="rounded-xl border border-brand-200 bg-white p-2 text-stone-600 transition-colors hover:border-brand-200 hover:text-brand-600"
+            className="btn-secondary px-2 py-1.5"
             aria-label="Next project"
           >
-            <ChevronRight size={18} />
+            <ChevronRight size={16} />
           </button>
         </div>
       </div>
 
-      <div className="relative px-4 sm:px-6 py-6 sm:py-8">
-        <div className="overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current.id}
-              initial={{ opacity: 0, x: 32 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -32 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <ProjectCard item={current} />
-            </motion.div>
-          </AnimatePresence>
-        </div>
+      <div className="px-4 sm:px-6 py-6">
+        <ProjectCard item={current} />
 
-        <div className="mt-6 flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+        <div className="mt-5 flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
           {items.map((item, i) => (
             <button
               key={item.id}
               onClick={() => setIndex(i)}
-              className={`shrink-0 rounded-xl border px-3 py-2 text-left transition-all duration-200 max-w-[220px] ${
+              className={`shrink-0 border px-3 py-2 text-left transition-colors max-w-[220px] ${
                 i === index
-                  ? 'border-brand-300 bg-brand-50 shadow-sm'
-                  : 'border-brand-200 bg-cream-50 hover:border-brand-300 hover:bg-brand-50'
+                  ? 'border-term-accent text-term-accent bg-term-elevated'
+                  : 'border-term-border text-term-muted hover:border-term-accent hover:text-term-accent'
               }`}
             >
-              <p className="text-xs font-semibold text-brand-950 truncate">{item.title}</p>
-              <p className="text-[10px] text-stone-500 truncate mt-0.5">{item.subtitle}</p>
+              <p className="text-xs font-semibold truncate">{item.title}</p>
+              <p className="text-[10px] truncate mt-0.5 opacity-70">{item.subtitle}</p>
             </button>
-          ))}
-        </div>
-
-        <div className="mt-4 flex justify-center gap-1.5">
-          {items.map((item, i) => (
-            <button
-              key={item.id}
-              onClick={() => setIndex(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === index ? 'w-8 bg-brand-700' : 'w-1.5 bg-brand-300 hover:bg-brand-500'
-              }`}
-              aria-label={`Go to ${item.title}`}
-            />
           ))}
         </div>
       </div>

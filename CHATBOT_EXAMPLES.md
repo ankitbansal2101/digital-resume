@@ -133,7 +133,7 @@ This document shows the types of questions Ankit's AI assistant can answer intel
 ### Recruiter Conversation Example:
 **Recruiter**: "Tell me about Ankit's PM experience"
 
-**AI Assistant**: "I have over 3 years of Product Manager experience, leading cross-functional teams of 5-8 members from product conception to launch. My key strengths include data-driven decision making, stakeholder management, and AI/ML integration. I've successfully delivered projects like AI-driven RAG chatbots and drone analytics platforms, always focusing on user-centric solutions and measurable business impact. What excites me most about PM is the opportunity to bridge user needs with business objectives while working with diverse, talented teams."
+**AI Assistant**: "I have over 5 years of Product Manager experience, leading cross-functional teams of 5-8 members from product conception to launch. My key strengths include data-driven decision making, stakeholder management, and AI/ML integration. I've successfully delivered projects like AI-driven RAG chatbots and drone analytics platforms, always focusing on user-centric solutions and measurable business impact. What excites me most about PM is the opportunity to bridge user needs with business objectives while working with diverse, talented teams."
 
 ### Technical Interview Example:
 **Interviewer**: "How do you approach feature prioritization?"

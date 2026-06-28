@@ -37,12 +37,12 @@ const companyProjects: ProjectCardItem[] = [
       'Translated field insights from enterprise customers into product direction and release planning',
     ],
     tags: ['B2B SaaS', 'PropTech', 'Martech', 'Product Strategy', 'User Research', 'Customer Success'],
-    gradient: 'from-brand-600 to-brand-800',
-    icon: <Users className="text-white" size={24} />,
+    gradient: 'from-term-accent-dim to-term-accent',
+    icon: <Users className="text-term-accent" size={24} />,
     metrics: [
-      { label: 'Stakeholder Interviews', value: '30+', icon: <Users className="text-brand-600" size={16} /> },
-      { label: 'Client Visits', value: '8+', icon: <Target className="text-brand-600" size={16} /> },
-      { label: 'Enterprise Customers', value: 'Multiple', icon: <TrendingUp className="text-brand-600" size={16} /> },
+      { label: 'Stakeholder Interviews', value: '30+', icon: <Users className="text-term-accent" size={16} /> },
+      { label: 'Client Visits', value: '8+', icon: <Target className="text-term-accent" size={16} /> },
+      { label: 'Enterprise Customers', value: 'Multiple', icon: <TrendingUp className="text-term-accent" size={16} /> },
     ],
   },
   {
@@ -59,8 +59,8 @@ const companyProjects: ProjectCardItem[] = [
       'Reduced customer onboarding timelines by ~90%, from 3 months down to 15 days',
     ],
     tags: ['CRM Architecture', 'Blueprint Management', 'AI Prototyping', 'Enterprise SaaS', 'Onboarding'],
-    gradient: 'from-brand-600 to-brand-800',
-    icon: <Target className="text-white" size={24} />,
+    gradient: 'from-term-accent-dim to-term-accent',
+    icon: <Target className="text-term-accent" size={24} />,
     links: [
       {
         label: 'Blueprint Prototype',
@@ -76,9 +76,9 @@ const companyProjects: ProjectCardItem[] = [
       { label: 'sirrus', href: 'https://github.com/ankitbansal2101/sirrus', type: 'github' },
     ],
     metrics: [
-      { label: 'Onboarding Reduction', value: '~90%', icon: <TrendingUp className="text-brand-600" size={16} /> },
-      { label: 'Timeline', value: '3mo → 15d', icon: <Zap className="text-brand-600" size={16} /> },
-      { label: 'Core Modules', value: '3', icon: <Target className="text-brand-600" size={16} /> },
+      { label: 'Onboarding Reduction', value: '~90%', icon: <TrendingUp className="text-term-accent" size={16} /> },
+      { label: 'Timeline', value: '3mo → 15d', icon: <Zap className="text-term-accent" size={16} /> },
+      { label: 'Core Modules', value: '3', icon: <Target className="text-term-accent" size={16} /> },
     ],
   },
   {
@@ -95,17 +95,17 @@ const companyProjects: ProjectCardItem[] = [
       'Integrated PickyAssist WhatsApp and Servetel Cloud Telephony to support client business processes end-to-end',
     ],
     tags: ['AI Voice Agent', 'Exotel', 'Zoho CRM', 'PickyAssist', 'Servetel', 'Enterprise Integrations'],
-    gradient: 'from-brand-600 to-brand-800',
-    icon: <Bot className="text-white" size={24} />,
+    gradient: 'from-term-accent-dim to-term-accent',
+    icon: <Bot className="text-term-accent" size={24} />,
     aiTools: [
-      { name: 'Exotel', icon: <Phone className="text-white" size={16} /> },
-      { name: 'PickyAssist', icon: <Sparkles className="text-white" size={16} /> },
-      { name: 'Zoho CRM', icon: <Database className="text-white" size={16} /> },
+      { name: 'Exotel', icon: <Phone className="text-term-accent" size={16} /> },
+      { name: 'PickyAssist', icon: <Sparkles className="text-term-accent" size={16} /> },
+      { name: 'Zoho CRM', icon: <Database className="text-term-accent" size={16} /> },
     ],
     metrics: [
-      { label: 'Integrations Delivered', value: '3', icon: <Zap className="text-brand-600" size={16} /> },
-      { label: 'Channels Orchestrated', value: '4+', icon: <Target className="text-brand-600" size={16} /> },
-      { label: 'Voice Agent', value: 'Live', icon: <Bot className="text-brand-600" size={16} /> },
+      { label: 'Integrations Delivered', value: '3', icon: <Zap className="text-term-accent" size={16} /> },
+      { label: 'Channels Orchestrated', value: '4+', icon: <Target className="text-term-accent" size={16} /> },
+      { label: 'Voice Agent', value: 'Live', icon: <Bot className="text-term-accent" size={16} /> },
     ],
   },
   {
@@ -122,17 +122,17 @@ const companyProjects: ProjectCardItem[] = [
       'Improved overall customer experience and satisfaction',
     ],
     tags: ['RAG Applications', 'Generative AI', 'Customer Support', 'LLM Integration', 'Chatbot'],
-    gradient: 'from-brand-600 to-brand-800',
-    icon: <Bot className="text-white" size={24} />,
+    gradient: 'from-term-accent-dim to-term-accent',
+    icon: <Bot className="text-term-accent" size={24} />,
     aiTools: [
-      { name: 'RAG', icon: <Brain className="text-white" size={16} /> },
-      { name: 'LLM', icon: <Bot className="text-white" size={16} /> },
-      { name: 'Vector DB', icon: <Database className="text-white" size={16} /> },
+      { name: 'RAG', icon: <Brain className="text-term-accent" size={16} /> },
+      { name: 'LLM', icon: <Bot className="text-term-accent" size={16} /> },
+      { name: 'Vector DB', icon: <Database className="text-term-accent" size={16} /> },
     ],
     metrics: [
-      { label: 'Support Queries', value: '-40%', icon: <TrendingUp className="text-brand-600" size={16} /> },
-      { label: 'Trial Churn', value: '-12%', icon: <Users className="text-brand-600" size={16} /> },
-      { label: 'User Learning', value: 'Faster', icon: <Target className="text-brand-600" size={16} /> },
+      { label: 'Support Queries', value: '-40%', icon: <TrendingUp className="text-term-accent" size={16} /> },
+      { label: 'Trial Churn', value: '-12%', icon: <Users className="text-term-accent" size={16} /> },
+      { label: 'User Learning', value: 'Faster', icon: <Target className="text-term-accent" size={16} /> },
     ],
   },
   {
@@ -149,17 +149,17 @@ const companyProjects: ProjectCardItem[] = [
       'Enhanced product capabilities with cutting-edge AI technologies',
     ],
     tags: ['Computer Vision', 'Grounding DINO', 'LLM Integration', 'Automation', 'AI Innovation'],
-    gradient: 'from-brand-600 to-brand-800',
-    icon: <Cpu className="text-white" size={24} />,
+    gradient: 'from-term-accent-dim to-term-accent',
+    icon: <Cpu className="text-term-accent" size={24} />,
     aiTools: [
-      { name: 'Grounding DINO', icon: <Cpu className="text-white" size={16} /> },
-      { name: 'LLM', icon: <Brain className="text-white" size={16} /> },
-      { name: 'Computer Vision', icon: <Zap className="text-white" size={16} /> },
+      { name: 'Grounding DINO', icon: <Cpu className="text-term-accent" size={16} /> },
+      { name: 'LLM', icon: <Brain className="text-term-accent" size={16} /> },
+      { name: 'Computer Vision', icon: <Zap className="text-term-accent" size={16} /> },
     ],
     metrics: [
-      { label: 'Processing Speed', value: '3x Faster', icon: <Zap className="text-brand-600" size={16} /> },
-      { label: 'Accuracy', value: '95%+', icon: <Target className="text-brand-600" size={16} /> },
-      { label: 'Automation', value: 'Full', icon: <TrendingUp className="text-brand-600" size={16} /> },
+      { label: 'Processing Speed', value: '3x Faster', icon: <Zap className="text-term-accent" size={16} /> },
+      { label: 'Accuracy', value: '95%+', icon: <Target className="text-term-accent" size={16} /> },
+      { label: 'Automation', value: 'Full', icon: <TrendingUp className="text-term-accent" size={16} /> },
     ],
   },
   {
@@ -176,17 +176,17 @@ const companyProjects: ProjectCardItem[] = [
       'Added $1M to company revenue through strategic product delivery',
     ],
     tags: ['AI Risk Models', 'Revenue Recovery', 'Payment Automation', 'Enterprise Sales'],
-    gradient: 'from-brand-600 to-brand-800',
-    icon: <Target className="text-white" size={24} />,
+    gradient: 'from-term-accent-dim to-term-accent',
+    icon: <Target className="text-term-accent" size={24} />,
     aiTools: [
-      { name: 'AI Risk Models', icon: <Brain className="text-white" size={16} /> },
-      { name: 'Payment Analytics', icon: <BarChart3 className="text-white" size={16} /> },
-      { name: 'Automation', icon: <Sparkles className="text-white" size={16} /> },
+      { name: 'AI Risk Models', icon: <Brain className="text-term-accent" size={16} /> },
+      { name: 'Payment Analytics', icon: <BarChart3 className="text-term-accent" size={16} /> },
+      { name: 'Automation', icon: <Sparkles className="text-term-accent" size={16} /> },
     ],
     metrics: [
-      { label: 'Revenue Added', value: '$1M', icon: <TrendingUp className="text-brand-600" size={16} /> },
-      { label: 'On-time Payments', value: '+12%', icon: <Target className="text-brand-600" size={16} /> },
-      { label: 'Client Closure', value: '1 Month', icon: <Zap className="text-brand-600" size={16} /> },
+      { label: 'Revenue Added', value: '$1M', icon: <TrendingUp className="text-term-accent" size={16} /> },
+      { label: 'On-time Payments', value: '+12%', icon: <Target className="text-term-accent" size={16} /> },
+      { label: 'Client Closure', value: '1 Month', icon: <Zap className="text-term-accent" size={16} /> },
     ],
   },
   {
@@ -203,12 +203,12 @@ const companyProjects: ProjectCardItem[] = [
       'Created new revenue stream through innovative payment solutions',
     ],
     tags: ['Payment Solutions', 'Client Requirements', 'Revenue Growth', 'Enterprise Sales', 'B2B SaaS'],
-    gradient: 'from-brand-600 to-brand-800',
-    icon: <Zap className="text-white" size={24} />,
+    gradient: 'from-term-accent-dim to-term-accent',
+    icon: <Zap className="text-term-accent" size={24} />,
     metrics: [
-      { label: 'Client Adoption', value: '+25%', icon: <TrendingUp className="text-brand-600" size={16} /> },
-      { label: 'ARR Expansion', value: '$3M', icon: <Target className="text-brand-600" size={16} /> },
-      { label: 'Enterprise Deals', value: '4', icon: <Users className="text-brand-600" size={16} /> },
+      { label: 'Client Adoption', value: '+25%', icon: <TrendingUp className="text-term-accent" size={16} /> },
+      { label: 'ARR Expansion', value: '$3M', icon: <Target className="text-term-accent" size={16} /> },
+      { label: 'Enterprise Deals', value: '4', icon: <Users className="text-term-accent" size={16} /> },
     ],
   },
 ];
@@ -228,12 +228,12 @@ const sideHustles: ProjectCardItem[] = [
       'Managed tutor onboarding, curriculum, and customer acquisition end-to-end',
     ],
     tags: ['EdTech', 'Founder', 'Tutoring', 'Revenue', 'Operations'],
-    gradient: 'from-brand-800 to-brand-900',
-    icon: <GraduationCap className="text-white" size={24} />,
+    gradient: 'from-term-accent-dim to-term-accent',
+    icon: <GraduationCap className="text-term-accent" size={24} />,
     metrics: [
-      { label: 'Students Trained', value: '500+', icon: <Users className="text-brand-600" size={16} /> },
-      { label: 'Countries', value: '10+', icon: <TrendingUp className="text-brand-600" size={16} /> },
-      { label: 'Team Built', value: '5+', icon: <Users className="text-brand-600" size={16} /> },
+      { label: 'Students Trained', value: '500+', icon: <Users className="text-term-accent" size={16} /> },
+      { label: 'Countries', value: '10+', icon: <TrendingUp className="text-term-accent" size={16} /> },
+      { label: 'Team Built', value: '5+', icon: <Users className="text-term-accent" size={16} /> },
     ],
   },
   {
@@ -250,14 +250,14 @@ const sideHustles: ProjectCardItem[] = [
       'Runs as a self-sustaining learning community for aspiring product managers',
     ],
     tags: ['Founder', 'Product Management', 'Community', 'Bootstrapped', 'AI Feedback'],
-    gradient: 'from-brand-700 to-brand-900',
-    icon: <Sparkles className="text-white" size={24} />,
+    gradient: 'from-term-accent-dim to-term-accent',
+    icon: <Sparkles className="text-term-accent" size={24} />,
     link: 'https://pmranker.com/',
     github: 'https://github.com/ankitbansal2101/PMRank',
     metrics: [
-      { label: 'Users', value: '250+', icon: <Users className="text-brand-600" size={16} /> },
-      { label: 'Challenges', value: '50+', icon: <Code className="text-brand-600" size={16} /> },
-      { label: 'Growth', value: 'Organic', icon: <TrendingUp className="text-brand-600" size={16} /> },
+      { label: 'Users', value: '250+', icon: <Users className="text-term-accent" size={16} /> },
+      { label: 'Challenges', value: '50+', icon: <Code className="text-term-accent" size={16} /> },
+      { label: 'Growth', value: 'Organic', icon: <TrendingUp className="text-term-accent" size={16} /> },
     ],
   },
 ];
@@ -267,28 +267,28 @@ const certifications = [
     id: 'data-science',
     title: 'Data Science Certification',
     subtitle: 'Python and R – Dimensionless Technologies',
-    icon: <Code className="text-brand-600" size={20} />,
+    icon: <Code className="text-term-accent" size={20} />,
     link: 'https://drive.google.com/file/d/0B9Mo5_VWtsqjZVdQdmd4ZjByaHFxY1pXS29LYmg2UGtISWJF/view?usp=drive_link&resourcekey=0-9Xn_cfUXTStNro1BM7x7Gw',
   },
   {
     id: 'hackerrank',
     title: '5⭐ HackerRank',
     subtitle: 'Python & SQL Excellence',
-    icon: <Star className="text-brand-600" size={20} />,
+    icon: <Star className="text-term-accent" size={20} />,
     link: 'https://www.hackerrank.com/profile/ankitbbb162',
   },
   {
     id: 'freelance',
     title: 'Freelance Product Work',
     subtitle: 'Gerald Technologies (Insurance POC)',
-    icon: <Award className="text-brand-600" size={20} />,
+    icon: <Award className="text-term-accent" size={20} />,
     link: null,
   },
   {
     id: 'community',
     title: 'Community Contributor',
     subtitle: 'Product Hunt & Indie Hackers',
-    icon: <Users className="text-brand-600" size={20} />,
+    icon: <Users className="text-term-accent" size={20} />,
     link: null,
   },
 ];
@@ -341,7 +341,7 @@ const Portfolio: React.FC = () => {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <h3 className="text-lg sm:text-xl font-bold text-brand-950 mb-6 text-center">
+          <h3 className="text-lg sm:text-xl font-bold text-term-text mb-6 text-center">
             Certifications & <span className="gradient-text">Achievements</span>
           </h3>
 
@@ -349,23 +349,23 @@ const Portfolio: React.FC = () => {
             {certifications.map((cert, index) => (
               <motion.div
                 key={cert.id}
-                className="rounded-xl border border-brand-100 bg-brand-50/50 p-4 transition-all duration-200 hover:shadow-card hover:border-brand-200"
+                className="rounded-xl border border-term-border bg-term-elevated/50 p-4 transition-all duration-200 hover:shadow-card hover:border-term-border"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08, duration: 0.4 }}
               >
                 <div className="flex items-start gap-3">
-                  <div className="rounded-lg border border-white bg-white p-2 shadow-sm">{cert.icon}</div>
+                  <div className="rounded-lg border border-white bg-term-surface p-2">{cert.icon}</div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-brand-950 mb-1 text-sm">{cert.title}</h4>
-                    <p className="text-stone-600 text-xs mb-2">{cert.subtitle}</p>
+                    <h4 className="font-semibold text-term-text mb-1 text-sm">{cert.title}</h4>
+                    <p className="text-term-muted text-xs mb-2">{cert.subtitle}</p>
                     {cert.link && (
                       <a
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-brand-600 hover:text-brand-700 text-xs font-medium"
+                        className="inline-flex items-center gap-1 text-term-accent hover:text-term-accent text-xs font-medium"
                       >
                         View Certificate
                         <ExternalLink size={10} />

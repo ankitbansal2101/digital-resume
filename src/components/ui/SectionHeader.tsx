@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface SectionHeaderProps {
   eyebrow?: string;
@@ -14,43 +13,30 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   title,
   highlight,
   subtitle,
-  align = 'center',
+  align = 'left',
 }) => {
-  const isCenter = align === 'center';
+  const heading = highlight ? `${title} ${highlight}` : title;
+  const label = eyebrow || title.split(' ')[0];
 
   return (
-    <motion.div
-      className={`mb-8 sm:mb-10 ${isCenter ? 'text-center' : 'text-left'}`}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <div className={`inline-flex flex-col ${isCenter ? 'items-center' : 'items-start'}`}>
-        <span className="mb-3 inline-block rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-600">
-          {eyebrow || title.split(' ')[0]}
-        </span>
-        <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-brand-950">
-          {highlight ? (
-            <>
-              {title}{' '}
-              <span className="gradient-text">{highlight}</span>
-            </>
-          ) : (
-            title
-          )}
-        </h2>
-        {subtitle && (
-          <p
-            className={`mt-3 max-w-2xl text-base sm:text-lg leading-relaxed text-stone-600 ${
-              isCenter ? 'mx-auto' : ''
-            }`}
-          >
-            {subtitle}
-          </p>
-        )}
-      </div>
-    </motion.div>
+    <div className={`mb-8 sm:mb-10 ${align === 'center' ? 'text-center' : 'text-left'}`}>
+      <p className="text-term-dim text-xs mb-2">
+        <span className="text-term-prompt">$</span> cd ./{label.toLowerCase()}
+      </p>
+      <h2 className="text-term-accent text-xl sm:text-2xl font-semibold tracking-tight">
+        # {heading.toLowerCase()}
+      </h2>
+      {subtitle && (
+        <p
+          className={`mt-3 max-w-2xl text-term-muted leading-relaxed ${
+            align === 'center' ? 'mx-auto' : ''
+          }`}
+        >
+          {subtitle}
+        </p>
+      )}
+      <div className="terminal-divider mt-5" />
+    </div>
   );
 };
 

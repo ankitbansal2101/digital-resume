@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Bot, User, Loader2, MessageCircle, X } from 'lucide-react';
+import { Send, Bot, User, Loader2, X } from 'lucide-react';
 import { openRouterService, ChatMessage } from '../services/openRouterApi';
 import { extractAllDocuments } from '../utils/pdfParser';
 import PredefinedQuestions from './PredefinedQuestions';
+import TerminalCursor from './ui/TerminalCursor';
 
 interface Message {
   id: string;
@@ -21,7 +22,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
     {
       id: '1',
       role: 'assistant',
-      content: "Hi! I'm Ankit's AI assistant. Ask me anything about his professional background, experience, skills, or qualifications. I'm here to help!",
+      content: "Hi! I'm Ankit's AI assistant. Ask me anything about his professional background, experience, skills, or qualifications.",
       timestamp: new Date()
     }
   ]);
@@ -47,12 +48,10 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
     }
   }, [isOpen]);
 
-  // Handle viewport height changes for mobile keyboard
   useEffect(() => {
     if (!isOpen) return;
 
     const handleResize = () => {
-      // Force a scroll to bottom when keyboard opens/closes
       setTimeout(() => {
         scrollToBottom();
       }, 100);
@@ -77,7 +76,6 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
     setIsLoading(true);
     setLoadingStage('generating');
     setError(null);
-    // Keep predefined questions visible for easy access
 
     try {
       const allDocumentsContent = await extractAllDocuments();
@@ -122,10 +120,6 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
   };
 
   const handlePredefinedQuestionSelect = (question: string, answer: string) => {
-    // Keep predefined questions visible for multiple selections
-    // setShowPredefinedQuestions(false); // Removed this line
-    
-    // Add user message
     const userMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
@@ -133,7 +127,6 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
       timestamp: new Date()
     };
 
-    // Add assistant response immediately (since we have predefined answer)
     const assistantMessage: Message = {
       id: (Date.now() + 1).toString(),
       role: 'assistant',
@@ -151,30 +144,28 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-brand-950/40 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-2 sm:p-4">
-      <div className="bg-cream-50 rounded-t-2xl sm:rounded-2xl shadow-luxury border border-brand-200/60 w-full max-w-sm sm:max-w-2xl h-[60vh] max-h-[60vh] sm:h-[600px] sm:max-h-[600px] flex flex-col">
-        {/* Header */}
-        <div className="bg-brand-800 text-cream-50 p-3 sm:p-4 rounded-t-2xl sm:rounded-t-2xl flex items-center justify-between">
+    <div className="fixed inset-0 bg-term-bg/80 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-2 sm:p-4">
+      <div className="border border-term-border bg-term-surface w-full max-w-sm sm:max-w-2xl h-[60vh] max-h-[60vh] sm:h-[600px] sm:max-h-[600px] flex flex-col">
+        <div className="border-b border-term-border p-3 sm:p-4 flex items-center justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="bg-brand-700/80 p-1.5 sm:p-2 rounded-full border border-brand-600/30">
-              <Bot size={16} className="sm:w-5 sm:h-5" />
-            </div>
+            <Bot size={16} className="text-term-accent" />
             <div>
-              <h3 className="font-semibold text-sm sm:text-base font-display">Ask about Ankit Bansal</h3>
-              <p className="text-brand-200 text-xs sm:text-sm">AI Assistant</p>
+              <h3 className="font-semibold text-base sm:text-lg text-term-accent">
+                ai --ask ankit
+              </h3>
+              <p className="text-term-dim text-sm">assistant online</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="text-brand-200 hover:text-cream-50 transition-colors p-1 sm:p-1 bg-brand-700/80 hover:bg-brand-600 rounded-full border border-brand-600/30"
+            className="text-term-muted hover:text-term-accent transition-colors p-1 border border-term-border hover:border-term-accent"
+            aria-label="Close chat"
           >
-            <X size={18} className="sm:w-5 sm:h-5" />
+            <X size={18} />
           </button>
         </div>
 
-        {/* Messages */}
         <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 min-h-0">
-          {/* Predefined Questions */}
           <PredefinedQuestions 
             onQuestionSelect={handlePredefinedQuestionSelect}
             isVisible={showPredefinedQuestions}
@@ -185,31 +176,27 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {message.role === 'assistant' && (
-                <div className="bg-brand-100 p-2 rounded-full flex-shrink-0 mt-1">
-                  <Bot size={16} className="text-brand-700" />
+                <div className="border border-term-border p-2 shrink-0 mt-1">
+                  <Bot size={14} className="text-term-accent" />
                 </div>
               )}
               
               <div
-                className={`max-w-[280px] sm:max-w-xs lg:max-w-md px-3 sm:px-4 py-2 rounded-lg ${
+                className={`max-w-[280px] sm:max-w-xs lg:max-w-md px-3 sm:px-4 py-2 border ${
                   message.role === 'user'
-                    ? 'bg-brand-700 text-cream-50'
-                    : 'bg-cream-100 text-brand-950 border border-brand-100'
+                    ? 'border-term-accent bg-term-elevated text-term-text'
+                    : 'border-term-border bg-term-bg text-term-muted'
                 }`}
               >
-                <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-                <p
-                  className={`text-xs mt-1 ${
-                    message.role === 'user' ? 'text-brand-200' : 'text-stone-500'
-                  }`}
-                >
+                <p className="text-base whitespace-pre-wrap">{message.content}</p>
+                <p className="text-sm mt-1 text-term-dim">
                   {formatTime(message.timestamp)}
                 </p>
               </div>
 
               {message.role === 'user' && (
-                <div className="bg-brand-700 p-2 rounded-full flex-shrink-0 mt-1">
-                  <User size={16} className="text-cream-50" />
+                <div className="border border-term-accent p-2 shrink-0 mt-1">
+                  <User size={14} className="text-term-accent" />
                 </div>
               )}
             </div>
@@ -217,48 +204,49 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
 
           {isLoading && (
             <div className="flex gap-3 justify-start">
-              <div className="bg-brand-100 p-2 rounded-full flex-shrink-0 mt-1">
-                <Bot size={16} className="text-brand-700" />
+              <div className="border border-term-border p-2 shrink-0 mt-1">
+                <Bot size={14} className="text-term-accent" />
               </div>
-              <div className="bg-cream-100 text-brand-950 border border-brand-100 px-4 py-2 rounded-lg">
-                <div className="flex items-center gap-2">
-                  <Loader2 size={16} className="animate-spin" />
-                  <span className="text-sm">
-                    {loadingStage === 'generating' ? 'Analyzing your question...' : 
-                     loadingStage === 'refining' ? 'Crafting the perfect answer...' : 
-                     'Thinking...'}
+              <div className="border border-term-border bg-term-bg px-4 py-2">
+                <div className="flex items-center gap-2 text-term-muted">
+                  <Loader2 size={16} className="animate-spin text-term-accent" />
+                  <span className="text-base">
+                    {loadingStage === 'generating' ? 'analyzing...' : 
+                     loadingStage === 'refining' ? 'crafting answer...' : 
+                     'thinking...'}
                   </span>
+                  <TerminalCursor className="text-base" />
                 </div>
               </div>
             </div>
           )}
 
           {error && (
-            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
-              <p className="text-sm">{error}</p>
+            <div className="border border-red-800 bg-red-950/30 text-red-400 px-4 py-3">
+              <p className="text-base">{error}</p>
             </div>
           )}
 
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Input */}
-        <div className="border-t border-brand-100 p-2 sm:p-4 flex-shrink-0 bg-cream-50">
+        <div className="border-t border-term-border p-2 sm:p-4 shrink-0">
           <div className="flex gap-2">
+            <span className="hidden sm:flex items-center text-term-prompt text-base shrink-0">$</span>
             <input
               ref={inputRef}
               type="text"
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ask anything..."
-              className="flex-1 border border-brand-200 bg-cream-50 rounded-lg px-3 py-2 text-sm text-brand-950 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
+              placeholder="ask anything..."
+              className="flex-1 border border-term-border bg-term-bg px-3 py-2 text-base text-term-text placeholder:text-term-dim focus:outline-none focus:border-term-accent"
               disabled={isLoading}
             />
             <button
               onClick={handleSendMessage}
               disabled={!inputMessage.trim() || isLoading}
-              className="bg-brand-700 text-cream-50 px-3 sm:px-4 py-2 rounded-lg hover:bg-brand-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2 flex-shrink-0"
+              className="btn-primary px-3 sm:px-4 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <Loader2 size={16} className="animate-spin" />
@@ -267,8 +255,8 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               )}
             </button>
           </div>
-          <p className="text-xs text-stone-500 mt-1 sm:mt-2 hidden sm:block">
-            Press Enter to send • This AI can answer questions about Ankit's professional background
+          <p className="text-sm text-term-dim mt-2 hidden sm:block">
+            enter to send · ai assistant for professional background questions
           </p>
         </div>
       </div>

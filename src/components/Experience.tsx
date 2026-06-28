@@ -11,8 +11,8 @@ const Experience = () => {
       company: 'Sirrus.ai',
       location: 'Mumbai',
       period: 'Nov 2025 – Present',
-      gradient: 'from-brand-600 to-brand-800',
-      icon: <Building2 className="text-white" size={24} />,
+      gradient: 'from-term-accent-dim to-term-accent',
+      icon: <Building2 className="text-term-accent" size={24} />,
       status: 'Current',
       achievements: [
         'Own the Engagement & Martech product roadmap for a B2B SaaS CRM platform serving real estate developers, driving product strategy across lead management, customer journeys, AI-powered engagement, and workflow automation used by multiple enterprise customers',
@@ -22,9 +22,9 @@ const Experience = () => {
         'Delivered end-to-end integrations with Zoho CRM, PickyAssist WhatsApp, and Servetel Cloud Telephony, coordinating across engineering, implementation, and customer teams to support enterprise-specific business processes and data synchronization requirements'
       ],
       keyMetrics: [
-        { label: 'Onboarding Time', value: '-90%', icon: <TrendingUp className="text-brand-700" size={16} /> },
-        { label: 'Stakeholder Interviews', value: '30+', icon: <Users className="text-brand-600" size={16} /> },
-        { label: 'Enterprise Integrations', value: '3', icon: <Zap className="text-brand-600" size={16} /> }
+        { label: 'Onboarding Time', value: '-90%', icon: <TrendingUp className="text-term-accent" size={16} /> },
+        { label: 'Stakeholder Interviews', value: '30+', icon: <Users className="text-term-accent" size={16} /> },
+        { label: 'Enterprise Integrations', value: '3', icon: <Zap className="text-term-accent" size={16} /> }
       ],
       tags: ['B2B SaaS', 'PropTech', 'Martech', 'AI Voice Agent', 'CRM Architecture', 'Enterprise Integrations']
     },
@@ -34,8 +34,8 @@ const Experience = () => {
       company: 'Asteria Aerospace',
       location: 'Bangalore - Remote',
       period: 'Jan 2025 – Oct 2025',
-      gradient: 'from-brand-600 to-brand-800',
-      icon: <Briefcase className="text-white" size={24} />,
+      gradient: 'from-term-accent-dim to-term-accent',
+      icon: <Briefcase className="text-term-accent" size={24} />,
       status: 'Previous',
       achievements: [
         'Defined product strategy and roadmap for drone data workflows, driving a 22% increase in client adoption',
@@ -45,9 +45,9 @@ const Experience = () => {
         'Drove backlog grooming, sprint planning, and user feedback loops ensuring 95% on-time, high-quality releases'
       ],
       keyMetrics: [
-        { label: 'Client Adoption', value: '+22%', icon: <TrendingUp className="text-brand-700" size={16} /> },
-        { label: 'Support Queries', value: '-40%', icon: <Zap className="text-brand-600" size={16} /> },
-        { label: 'On-time Delivery', value: '95%', icon: <Target className="text-brand-600" size={16} /> }
+        { label: 'Client Adoption', value: '+22%', icon: <TrendingUp className="text-term-accent" size={16} /> },
+        { label: 'Support Queries', value: '-40%', icon: <Zap className="text-term-accent" size={16} /> },
+        { label: 'On-time Delivery', value: '95%', icon: <Target className="text-term-accent" size={16} /> }
       ],
       tags: ['AI Product Strategy', 'RAG Applications', 'Computer Vision', 'Drone Technology']
     },
@@ -57,8 +57,8 @@ const Experience = () => {
       company: 'IpaySmart (Smart Energy Water)',
       location: 'Noida',
       period: 'Jan 2023 – Dec 2024',
-      gradient: 'from-brand-600 to-brand-800',
-      icon: <Target className="text-white" size={24} />,
+      gradient: 'from-term-accent-dim to-term-accent',
+      icon: <Target className="text-term-accent" size={24} />,
       status: 'Previous',
       achievements: [
         'Owned Smart Revenue Recovery, integrating AI-driven payment risk models with dev & data teams; closed a major client in 1 month and added $1M to revenue',
@@ -68,9 +68,9 @@ const Experience = () => {
         'Led cross-functional collaboration to deliver enterprise-grade payment solutions'
       ],
       keyMetrics: [
-        { label: 'Revenue Added', value: '$1M', icon: <TrendingUp className="text-brand-700" size={16} /> },
-        { label: 'ARR Growth', value: '+15%', icon: <Target className="text-brand-600" size={16} /> },
-        { label: 'Team Velocity', value: '+20%', icon: <Zap className="text-brand-600" size={16} /> }
+        { label: 'Revenue Added', value: '$1M', icon: <TrendingUp className="text-term-accent" size={16} /> },
+        { label: 'ARR Growth', value: '+15%', icon: <Target className="text-term-accent" size={16} /> },
+        { label: 'Team Velocity', value: '+20%', icon: <Zap className="text-term-accent" size={16} /> }
       ],
       tags: ['AI-driven Risk Models', 'Revenue Recovery', 'Enterprise B2B', 'Payment Solutions']
     },
@@ -80,8 +80,8 @@ const Experience = () => {
       company: 'Smart Energy Water',
       location: 'Noida',
       period: 'Jul 2021 – Jan 2023',
-      gradient: 'from-brand-600 to-brand-800',
-      icon: <Award className="text-white" size={24} />,
+      gradient: 'from-term-accent-dim to-term-accent',
+      icon: <Award className="text-term-accent" size={24} />,
       status: 'Previous',
       achievements: [
         'Partnered with design, dev & QA and closely worked on client requirements to launch 5+ new payment features, driving 25% uplift in client adoption',
@@ -91,9 +91,9 @@ const Experience = () => {
         'Led product initiatives that significantly improved client satisfaction and retention rates'
       ],
       keyMetrics: [
-        { label: 'Client Adoption', value: '+25%', icon: <TrendingUp className="text-brand-700" size={16} /> },
-        { label: 'ARR Expansion', value: '$3M', icon: <Target className="text-brand-600" size={16} /> },
-        { label: 'Enterprise Deals', value: '4', icon: <Users className="text-brand-600" size={16} /> }
+        { label: 'Client Adoption', value: '+25%', icon: <TrendingUp className="text-term-accent" size={16} /> },
+        { label: 'ARR Expansion', value: '$3M', icon: <Target className="text-term-accent" size={16} /> },
+        { label: 'Enterprise Deals', value: '4', icon: <Users className="text-term-accent" size={16} /> }
       ],
       tags: ['Payment Solutions', 'Client Requirements', 'Revenue Growth', 'User Research']
     },
@@ -103,8 +103,8 @@ const Experience = () => {
       company: 'Collegedunia',
       location: 'Gurgaon',
       period: 'Jan 2020 – Jun 2020',
-      gradient: 'from-brand-600 to-brand-800',
-      icon: <Briefcase className="text-white" size={24} />,
+      gradient: 'from-term-accent-dim to-term-accent',
+      icon: <Briefcase className="text-term-accent" size={24} />,
       status: 'Internship',
       achievements: [
         'Led web scraping and data extraction projects to enrich database with 200+ verified college listings',
@@ -112,9 +112,9 @@ const Experience = () => {
         'Delivered dashboards and reports to guide editorial and SEO efforts with data-driven insights'
       ],
       keyMetrics: [
-        { label: 'College Listings', value: '200+', icon: <Users className="text-brand-700" size={16} /> },
-        { label: 'Automation', value: 'Scripts', icon: <Zap className="text-brand-600" size={16} /> },
-        { label: 'Data Insights', value: 'Driven', icon: <Target className="text-brand-600" size={16} /> }
+        { label: 'College Listings', value: '200+', icon: <Users className="text-term-accent" size={16} /> },
+        { label: 'Automation', value: 'Scripts', icon: <Zap className="text-term-accent" size={16} /> },
+        { label: 'Data Insights', value: 'Driven', icon: <Target className="text-term-accent" size={16} /> }
       ],
       tags: ['Data Extraction', 'Automation', 'Analytics', 'EdTech']
     }
@@ -175,18 +175,18 @@ const Experience = () => {
         eyebrow="Experience"
         title="Work"
         highlight="Experience"
-        subtitle="4+ years of product management across proptech, aerospace, fintech, and utilities, driving innovation and measurable business impact."
+        subtitle="5+ years of product management across proptech, aerospace, fintech, and utilities, driving innovation and measurable business impact."
       />
 
       <div className="max-w-full mx-auto">
         {/* Career Timeline Visualization */}
         <motion.div 
-          className="mb-8 section-card p-6 sm:p-8 bg-gradient-to-br from-brand-50/80 to-cream-200/80"
+          className="mb-8 section-card p-6 sm:p-8 bg-gradient-to-br from-term-elevated to-term-bg"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <h3 className="text-lg sm:text-xl font-bold text-brand-950 mb-6 text-center">
+          <h3 className="text-lg sm:text-xl font-bold text-term-text mb-6 text-center">
             Career <span className="gradient-text">Journey</span>
           </h3>
           
@@ -199,16 +199,16 @@ const Experience = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 + index * 0.2, duration: 0.5 }}
                 >
-                  <div className={`bg-gradient-to-br ${exp.gradient} rounded-full p-3 mb-2 shadow-lg`}>
-                    <div className="w-5 h-5 text-white">{exp.icon}</div>
+                  <div className="border border-term-border p-3 mb-2 text-term-accent">
+                    {exp.icon}
                   </div>
-                  <h4 className="font-semibold text-brand-950 text-xs">{exp.company}</h4>
-                  <p className="text-stone-500 text-xs">{exp.period.split(' – ')[0]}</p>
+                  <h4 className="font-semibold text-term-text text-xs">{exp.company}</h4>
+                  <p className="text-term-muted text-xs">{exp.period.split(' – ')[0]}</p>
                 </motion.div>
                 
                 {index < experiences.length - 1 && (
                   <motion.div
-                    className="hidden sm:block w-6 h-0.5 bg-gradient-to-r from-brand-300 to-brand-400"
+                    className="hidden sm:block w-6 h-0.5 bg-gradient-to-r from-term-border to-term-accent"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 0.7 + index * 0.2, duration: 0.5 }}
@@ -234,26 +234,18 @@ const Experience = () => {
               whileHover="hover"
             >
               <motion.div
-                className="section-card overflow-hidden relative h-full flex flex-col transition-shadow duration-300 hover:shadow-card-hover"
+                className="section-card overflow-hidden relative h-full flex flex-col transition-colors duration-300 hover:border-term-accent"
                 variants={hoverVariants}
               >
 
 
-                {/* Gradient Header */}
-                <div className={`bg-gradient-to-br ${exp.gradient} p-6 sm:p-8 text-white relative overflow-hidden`}>
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white transform translate-x-16 -translate-y-16"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-white transform -translate-x-12 translate-y-12"></div>
-                  </div>
-                  
-                  <div className="relative z-10">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex-1 pr-4">
-                        <h3 className="text-2xl sm:text-3xl font-bold mb-4 leading-tight">
-                          {exp.title}
-                        </h3>
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-white/80">
+                <div className="border-b border-term-accent border-l-4 border-l-term-accent p-6 sm:p-8 bg-term-elevated">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1 pr-4">
+                      <h3 className="text-xl sm:text-2xl font-semibold mb-4 leading-tight text-term-accent">
+                        {exp.title}
+                      </h3>
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-term-muted">
                           <div className="flex items-center gap-1">
                             <Calendar size={14} />
                             <span className="text-sm">{exp.period}</span>
@@ -264,19 +256,12 @@ const Experience = () => {
                           </div>
                         </div>
                       </div>
-                      
-                      {/* Company Icon */}
-                      <motion.div
-                        className="bg-white/20 backdrop-blur-sm rounded-xl p-3"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                      >
-                        {exp.icon}
-                      </motion.div>
-                    </div>
-                  </div>
-                </div>
 
-                {/* Content */}
+                      <div className="border border-term-border p-3 text-term-accent shrink-0">
+                        {exp.icon}
+                      </div>
+                    </div>
+                </div>
                 <div className="p-4 sm:p-6 flex-1 flex flex-col">
                   {/* Key Metrics */}
                   {exp.keyMetrics && (
@@ -290,8 +275,8 @@ const Experience = () => {
                           <div className="flex items-center justify-center mb-1">
                             {metric.icon}
                           </div>
-                          <div className="font-bold text-sm text-brand-950">{metric.value}</div>
-                          <div className="text-xs text-stone-500">{metric.label}</div>
+                          <div className="font-bold text-sm text-term-text">{metric.value}</div>
+                          <div className="text-xs text-term-muted">{metric.label}</div>
                         </motion.div>
                       ))}
                     </div>
@@ -299,17 +284,17 @@ const Experience = () => {
 
                   {/* Key Achievements */}
                   <div className="mb-4">
-                    <h4 className="font-semibold text-brand-950 mb-3 text-base">Key Achievements</h4>
+                    <h4 className="font-semibold text-term-text mb-3 text-base">Key Achievements</h4>
                     <ul className="space-y-2">
                       {exp.achievements.slice(0, 4).map((achievement, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-stone-600">
+                        <li key={idx} className="flex items-start gap-2 text-term-muted">
                           <motion.div 
-                            className="bg-brand-100 rounded-full p-0.5 mt-1 flex-shrink-0"
+                            className="mt-1 flex-shrink-0 text-term-accent"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.5 + idx * 0.1 }}
                           >
-                            <div className="w-1.5 h-1.5 bg-brand-600 rounded-full"></div>
+                            &gt;
                           </motion.div>
                           <span className="text-xs sm:text-sm leading-relaxed">{achievement}</span>
                         </li>
@@ -331,12 +316,6 @@ const Experience = () => {
                   </div>
                 </div>
 
-                {/* Hover Overlay */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-t from-brand-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                />
               </motion.div>
             </motion.div>
           ))}

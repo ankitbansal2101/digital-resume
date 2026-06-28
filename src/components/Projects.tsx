@@ -205,15 +205,15 @@ const Projects = () => {
               whileHover="hover"
             >
               <motion.div
-                className="h-full bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden relative"
+                className="h-full bg-term-surface rounded-2xl border border-gray-100 overflow-hidden relative"
                 variants={hoverVariants}
               >
                 {/* Gradient Header */}
                 <div className={`bg-gradient-to-br ${project.gradient} p-6 sm:p-8 text-white relative overflow-hidden`}>
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white transform translate-x-16 -translate-y-16"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-white transform -translate-x-12 translate-y-12"></div>
+                    <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-term-surface transform translate-x-16 -translate-y-16"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-term-surface transform -translate-x-12 translate-y-12"></div>
                   </div>
                   
                   <div className="relative z-10">
@@ -231,7 +231,7 @@ const Projects = () => {
                       
                       {/* Project Icon */}
                       <motion.div
-                        className="bg-white/20 backdrop-blur-sm rounded-xl p-3"
+                        className="bg-term-surface/20 backdrop-blur-sm rounded-xl p-3"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
                         {project.icon}
@@ -347,7 +347,7 @@ const Projects = () => {
 
         {/* Certifications & Achievements */}
         <motion.div 
-          className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 sm:p-8"
+          className="bg-term-surface rounded-xl border border-gray-100 p-6 sm:p-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
@@ -370,7 +370,7 @@ const Projects = () => {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="flex items-start gap-3">
-                  <div className="bg-white rounded-lg p-2 shadow-sm">
+                  <div className="bg-term-surface rounded-lg p-2">
                     {cert.icon}
                   </div>
                   <div className="flex-1">

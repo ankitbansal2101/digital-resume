@@ -44,7 +44,7 @@ export const getAboutContent = (): string => {
 DETAILED BACKGROUND & PERSONAL INSIGHTS:
 
 PROFESSIONAL OVERVIEW:
-I am a strategic Product Manager based in Mumbai, India, with over 4 years of experience building and scaling B2B SaaS products across proptech, aerospace, fintech, and utilities. My approach to product management goes beyond building features, I focus on delivering tangible value to users, understanding their problems deeply, and designing solutions that are both innovative and practical.
+I am a strategic Product Manager based in Mumbai, India, with over 5 years of experience building and scaling B2B SaaS products across proptech, aerospace, fintech, and utilities. My approach to product management goes beyond building features, I focus on delivering tangible value to users, understanding their problems deeply, and designing solutions that are both innovative and practical.
 
 CAREER JOURNEY & ACHIEVEMENTS:
 My professional journey started as a Business Analyst Intern at Collegedunia, where I combined Python, SQL, and web scraping to automate workflows and deliver actionable insights. This foundation in data-driven decision-making shaped my approach to product management: grounding decisions in real user behavior and metrics.
@@ -80,6 +80,7 @@ KEY STRENGTHS & SKILLS:
 - Technical & AI Skills: Python, SQL, RAG chatbots, no-code prototyping, workflow automation, BI dashboards
 - Analytical & Data Skills: Metrics & KPIs, A/B testing, user analytics, insight-driven product decisions
 - Collaboration Tools: Jira, Confluence, Figma, Miro, GitHub, Notion
+- AI Tools & Platforms: Cursor, Claude Code, ElevenLabs
 
 MEASURABLE ACHIEVEMENTS & IMPACT:
 - Reduced trial customer drop-offs using an AI-powered RAG chatbot
@@ -156,11 +157,12 @@ Mumbai, India ◆ +91 8875519489 ◆ ankitbbb162@gmail.com ◆ https://www.linke
 https://ankit-bansal.netlify.app/ | https://github.com/ankitbansal2101
 
 PROFESSIONAL SUMMARY
-Strategic AI Product Manager with 4+ years of experience building and scaling B2B SaaS products across proptech, aerospace, fintech, and utilities. Proven expertise in driving end-to-end product lifecycles, client-led discovery, and cross-functional delivery. Skilled in AI productization, RAG chatbots, AI voice agents, cloud telephony & WhatsApp API integrations, with hands-on rapid prototyping that accelerates design validation. Passionate about leveraging Generative AI, data, and emerging tech to solve business problems and accelerate product growth.
+Strategic AI Product Manager with 5+ years of experience building and scaling B2B SaaS products across proptech, aerospace, fintech, and utilities. Proven expertise in driving end-to-end product lifecycles, client-led discovery, and cross-functional delivery. Skilled in AI productization, RAG chatbots, AI voice agents, cloud telephony & WhatsApp API integrations, with hands-on rapid prototyping that accelerates design validation. Passionate about leveraging Generative AI, data, and emerging tech to solve business problems and accelerate product growth.
 
 SKILLS
 Product Management: Strategy, Roadmapping, Agile/Scrum, Stakeholder Management, Requirements Gathering, User Research, Metrics & KPIs, Experimentation (A/B Testing, Prototyping)
 AI & Technical: Generative AI, RAG Applications, AI Voice Agents, Cloud Telephony, WhatsApp API, Workflow Automation, Python (Advanced), LLM Integrations, Computer Vision (Grounding DINO)
+AI Tools & Platforms: Cursor, Claude Code, ElevenLabs
 Data & Analytics: SQL, Product Analytics, Excel, Tableau, Clarity
 Collaboration & Tools: Jira, Confluence, Figma, Miro, GitHub, Notion
 
