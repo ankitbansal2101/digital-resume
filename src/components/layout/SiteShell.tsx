@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import TerminalCursor from '../ui/TerminalCursor';
+import TypewriterLogo from '../ui/TypewriterLogo';
 import ChatButton from '../ChatButton';
 import Chatbot from '../Chatbot';
 
@@ -20,8 +20,12 @@ const SiteShell: React.FC = () => {
     <div className="min-h-screen bg-term-bg text-term-text">
       <header className="section-container px-4 sm:px-6 pt-8 pb-6">
         <div className="flex items-start justify-between gap-4">
-          <Link to="/" className="text-term-prompt text-lg sm:text-xl hover:text-term-accent">
-            ~/<TerminalCursor />
+          <Link
+            to="/"
+            className="text-lg sm:text-xl hover:opacity-80 transition-opacity"
+            aria-label="Home"
+          >
+            <TypewriterLogo />
           </Link>
 
           <div className="relative text-base">
