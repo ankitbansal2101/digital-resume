@@ -196,6 +196,138 @@
   .terminal-output {
     @apply mt-2 pl-0 text-term-muted;
   }
+
+  .convai-embed {
+    display: block;
+  }
+}
+
+/* ElevenLabs widget design tokens (matches voice agent config) */
+:root {
+  --convai-base: #787575;
+  --convai-base-hover: #4a5a69;
+  --convai-base-active: #99aed9;
+  --convai-base-border: #e5e7eb;
+  --convai-base-subtle: #6b7280;
+  --convai-base-primary: #000000;
+  --convai-base-error: #ef4444;
+  --convai-accent: #000000;
+  --convai-accent-hover: #1f2937;
+  --convai-accent-active: #374151;
+  --convai-accent-border: #4b5563;
+  --convai-accent-subtle: #6b7280;
+  --convai-accent-primary: #ffffff;
+  --convai-overlay-padding: 0.5rem;
+  --convai-button-radius: 19px;
+  --convai-input-radius: 18px;
+  --convai-bubble-radius: 16px;
+  --convai-sheet-radius: 36px;
+  --convai-compact-sheet-radius: 31px;
+}
+
+/* Compact assistant dock */
+.chat-compact-fixed {
+  position: fixed;
+  z-index: 100001;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+
+.compact-assistant-sheet {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+  min-height: 0;
+  padding: var(--convai-overlay-padding);
+  background: var(--convai-base);
+  border: 1px solid var(--convai-base-border);
+  border-radius: var(--convai-compact-sheet-radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  pointer-events: auto;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.compact-assistant-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.compact-assistant-avatar-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--convai-base-border);
+}
+
+.compact-assistant-avatar-inner {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--convai-base-subtle);
+  color: var(--convai-accent-primary);
+}
+
+.compact-assistant-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+  min-width: 0;
+  height: 2.25rem;
+  margin: 0.25rem;
+  margin-left: 0;
+  padding: 0 0.625rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--convai-accent-primary);
+  background: var(--convai-accent);
+  border: 1px solid var(--convai-accent-border);
+  border-radius: var(--convai-button-radius);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  overflow: hidden;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.compact-assistant-action:hover {
+  background: var(--convai-accent-hover);
+  border-color: var(--convai-accent-border);
+}
+
+.compact-assistant-action:active {
+  background: var(--convai-accent-active);
+  border-color: var(--convai-accent-border);
+}
+
+.compact-assistant-action-icon {
+  flex-shrink: 0;
+}
+
+.compact-assistant-action-label {
+  display: block;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.375rem;
+}
+
+.convai-embed {
+  z-index: 100000 !important;
 }
 
 @layer utilities {

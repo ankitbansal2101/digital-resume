@@ -144,14 +144,14 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-term-bg/80 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-2 sm:p-4">
+    <div className="fixed inset-0 bg-term-bg/80 backdrop-blur-sm flex items-end sm:items-center justify-center z-[100002] p-2 sm:p-4">
       <div className="border border-term-border bg-term-surface w-full max-w-sm sm:max-w-2xl h-[60vh] max-h-[60vh] sm:h-[600px] sm:max-h-[600px] flex flex-col">
         <div className="border-b border-term-border p-3 sm:p-4 flex items-center justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
             <Bot size={16} className="text-term-accent" />
             <div>
               <h3 className="font-semibold text-base sm:text-lg text-term-accent">
-                ai --ask ankit
+                Ankit&apos;s Text AI
               </h3>
               <p className="text-term-dim text-sm">assistant online</p>
             </div>

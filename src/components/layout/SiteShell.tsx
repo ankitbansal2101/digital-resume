@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import TypewriterLogo from '../ui/TypewriterLogo';
-import ChatButton from '../ChatButton';
 import Chatbot from '../Chatbot';
+import AssistantWidgets from '../AssistantWidgets';
 
 const navItems = [
   { to: '/', label: 'Home' },
@@ -64,7 +64,7 @@ const SiteShell: React.FC = () => {
         </div>
       </header>
 
-      <main className="section-container px-4 sm:px-6 pb-16 prose-terminal">
+      <main className="section-container px-4 sm:px-6 pb-24 sm:pb-20 prose-terminal">
         <Outlet />
       </main>
 
@@ -73,7 +73,7 @@ const SiteShell: React.FC = () => {
         <p>© 2025 Ankit Bansal</p>
       </footer>
 
-      <ChatButton onClick={() => setIsChatOpen(true)} />
+      <AssistantWidgets onOpenChat={() => setIsChatOpen(true)} />
       <Chatbot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
     </div>
   );
