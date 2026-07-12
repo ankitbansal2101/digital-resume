@@ -1,0 +1,7 @@
+# Redirect old Netlify subdomain to custom domain
+[[redirects]]
+  from = "/*"
+  to = "https://ankitbansal.in/:splat"
+  status = 301
+  force = true
+  conditions = { Host = ["ankit-bansal.netlify.app"] }
