@@ -1,6 +1,1 @@
-# Domain redirect — must come BEFORE the SPA catch-all
-https://ankit-bansal.netlify.app/*  https://ankitbansal.in/:splat  301!
-http://ankit-bansal.netlify.app/*   https://ankitbansal.in/:splat  301!
-
-# SPA fallback for ankitbansal.in
 /*    /index.html   200
